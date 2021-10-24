@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+/*
+ https://daveceddia.com/useeffect-hook-examples/#prevent-useeffect-from-running-every-render
+ */
 
 function PropChangeWatch({ a, b }) {
   useEffect(() => {

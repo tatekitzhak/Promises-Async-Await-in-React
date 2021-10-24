@@ -1,7 +1,6 @@
-import React from "react";
+import React, {useContext}from "react";
 import { Link } from "react-router-dom";
-import waveicon2 from '../../../src/assets/images/waveicon2.png';
-import { useHistory } from "react-router-dom";
+import {HeaderNavigationMenuContext} from './state_management/main';
 
 const nameLinks = [{
                   path: '/',
@@ -10,41 +9,32 @@ const nameLinks = [{
                   path: '/contact-us',
                   title: 'Contact',
                 }, {
-                  path: '/Task-1',
-                  title: 'Task 1',
+                  path: '/task-1',
+                  title: 'task 1',
                 }, {
-                  path: '/Task-2',
-                  title: 'Task 2',
+                  path: '/task-2',
+                  title: 'task 2',
                 },
                 {
-                  path: '/Task-3',
-                  title: 'Task 3',
+                  path: '/task-3',
+                  title: 'task 3',
                 },
                 {
-                  path: '/Task-4',
-                  title: 'Task 4',
+                  path: '/task-4',
+                  title: 'task 4',
                 },
                 {
-                  path: '/Task-5',
-                  title: 'Task 5',
+                  path: '/task-5',
+                  title: 'task 5',
                 }
               ];
 
 function Header(props) {
-      const history = useHistory();
-
-      const redirect = () => {
-        let path = `/side-bar-1`;
-
-        // history.push(path);
-        // history.push(path);
-        // history.goBack();
-    }
-
+  const [menus, setMenus] = useContext(HeaderNavigationMenuContext);
     return (
         <>
-          <div className="">
             <header className="header">
+              {console.log("menu Header:", menus)}
               <nav className="navbar navbar-expand-lg fixed-top py-3">
                 <div className="container">
                   <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" className="navbar-toggler navbar-toggler-right">
@@ -65,6 +55,7 @@ function Header(props) {
                                               }}>
                                     {title}
                                     {/* <span class="sr-only">(current)</span> */}
+                                    {console.log("Header:",props)}
                                   </Link>
                                 </li>
                               )
@@ -75,7 +66,6 @@ function Header(props) {
                 </div>
               </nav>
             </header>
-          </div>
         </>
     );
 }

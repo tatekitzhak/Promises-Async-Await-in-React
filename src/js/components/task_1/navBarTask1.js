@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
-import {CategoriesContext} from './dataContext';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import {CategoriesContext} from './dataContext';
 
 function NavigationBar(){
   const [categories, setCategories] = useContext(CategoriesContext);
@@ -27,7 +28,7 @@ function NavigationBar(){
                                 // to={`/side-bar/${value.categorie}`}
                                 key={index}
                                 to={{
-                                      pathname:`/side-bar-1/${value.categorie}`,
+                                      pathname:`/side-bar-3/${value.categorie}`,
                                       state: { fromNotifications: true,
                                                name: "Ran"
                                              }
