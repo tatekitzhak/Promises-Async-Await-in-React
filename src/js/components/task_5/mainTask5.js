@@ -1,7 +1,7 @@
 import React, {useState, useReducer, createContext} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Reducer1 from './reducer1';
-import Reducer2 from './reducer2';
+import Fetch1 from './fetch1';
+import Fetch2 from './fetch2';
 import Component1 from './component1';
 
 function MainTask5() {
@@ -15,7 +15,7 @@ function MainTask5() {
 
               </div>
             </div>
-              <Component1/>
+              <Fetch2/>
           </div>
       </Router>
     </>

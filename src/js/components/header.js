@@ -55,13 +55,16 @@ function Header(props) {
                     <ul className="navbar-nav ml-auto">
                     {
                       nameLinks.map(({path, title}, key) => {
+                       
                         return (
+                          
                                 <li key={key}>
                                   <Link className="nav-link text-uppercase"
                                         to={{
                                               pathname:`${path}`
                                               }}>
                                     {title}
+                                    {/* <span class="sr-only">(current)</span> */}
                                   </Link>
                                 </li>
                               )

@@ -26,7 +26,7 @@ function reducer(state, action) {
 
 }
 
-function Reducer1() {
+function Fetch1() {
   const [data, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -70,4 +70,4 @@ function Reducer1() {
 
 }
 
-export default Reducer1;
+export default Fetch1;
