@@ -47,7 +47,7 @@ function Item({match}) {
                 <h1>Item: {data.topic}</h1>
               </div>
               <div className="list-group list-group-flush">
-                {console.log("data:", data)}
+                {console.log("Item:", data)}
               </div>
           </div>
       </div>

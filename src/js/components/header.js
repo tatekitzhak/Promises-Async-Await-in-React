@@ -44,7 +44,7 @@ function Header(props) {
                   <div id="navbarSupportedContent" className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                     {
-                      nameLinks.map(({path, title}, key) => {
+                      menus.map(({path, title}, key) => {
                        
                         return (
                           

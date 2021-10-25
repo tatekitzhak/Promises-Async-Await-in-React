@@ -28,7 +28,7 @@ function NavigationBar(){
                                 // to={`/side-bar/${value.categorie}`}
                                 key={index}
                                 to={{
-                                      pathname:`/side-bar-3/${value.categorie}`,
+                                      pathname:`/side-bar-1/${value.categorie}`,
                                       state: { fromNotifications: true,
                                                name: "Ran"
                                              }
