@@ -8,7 +8,7 @@ import Users from './pages/users';
 import Login from './pages/login';
 
 
-function MainTask2() {
+function MainTask2(props) {
 
 
   return (
@@ -18,11 +18,11 @@ function MainTask2() {
             <div className="border-end bg-white">
                 <div className="sidebar-heading border-bottom bg-light text-center">
                   <h1>Task 2 </h1>
-                  <NavigationBar/>
+                  <NavigationBar {...props}/>
                 </div>
 
             </div>
-            {
+            {console.log("MainTask2:",props.match.path)
               // <Switch>
               //   <Route exact path="/side-bar-2/" component={Home} />
               //
@@ -31,10 +31,10 @@ function MainTask2() {
           }
 
             <Switch>
-              <Route exact path="/side-bar-2" component={Home} />
-              <Route exact path="/side-bar-2/about" component={About} />
-              <Route exact path="/side-bar-2/users" component={Users} />
-              <Route exact path="/side-bar-2/login" component={Login} />
+              <Route exact path={`${props.match.path}`} component={Home} />
+              <Route exact path={"/side-bar-2/about"} component={About} />
+              <Route exact path={"/side-bar-2/users" }component={Users} />
+              <Route exact path={"/side-bar-2/login" }component={Login} />
             </Switch>
         </div>
       </Router>

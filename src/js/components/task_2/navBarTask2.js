@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
-  function NavigationBar() {
+  function NavigationBar(props) {
     const navLinks = [{
                         path: '/',
                         name: 'Home',
@@ -31,8 +31,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
                         return (
                                 <Link className="list-group-item list-group-item-action list-group-item-light p-3"
                                       key={key}
+                                      
                                       to={{
-                                            pathname:`/side-bar-2${path}`
+                                            pathname:`${props.match.path}${path}`
                                             }}>
                                   {name}
                                 </Link>
