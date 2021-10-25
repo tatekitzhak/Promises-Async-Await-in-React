@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import {CategoriesContext} from './dataContext';
 
-function NavigationBar(){
+function NavigationBar(props){
   const [categories, setCategories] = useContext(CategoriesContext);
 
   const dispatcher = (event) =>{
@@ -25,10 +25,9 @@ function NavigationBar(){
                           <Link className="list-group-item list-group-item-action list-group-item-light p-3"
                                 data-txt={`${value.categorie}`}
                                 onClick={dispatcher}
-                                // to={`/side-bar/${value.categorie}`}
                                 key={index}
                                 to={{
-                                      pathname:`/side-bar-1/${value.categorie}`,
+                                      pathname:`${props.match.path}/${value.categorie}`,
                                       state: { fromNotifications: true,
                                                name: "Ran"
                                              }

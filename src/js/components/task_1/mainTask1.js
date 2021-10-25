@@ -10,16 +10,16 @@ import Content from './pages/content';
 
 
 
-function MainTask1() {
+function MainTask1(props) {
 
 
   return(
     <Router>
       <div className="row">
-
+        {console.log("MainTask1:",props.match.path)}
         <div className="col-md-3 pull-md-right">
           <SidebarProvider>
-            <NavigationBar/>
+            <NavigationBar {...props}/>
           </SidebarProvider>
         </div>
 
@@ -31,7 +31,7 @@ function MainTask1() {
                 <Route exact path="/side-bar-1/:a"
                              render={(props) => <Item {...props} title={`Props through render (PropsPage)`}  name={'Ran'}/>} />
 
-                <Route exact path="/side-bar-1/:link"
+                <Route exact path={`${props.match.path}/:link`}
                              component={(props) => <Item {...props} title={"abc"}/> }/>
 
               </ContentProvider>
