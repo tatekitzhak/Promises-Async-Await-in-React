@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, Switch, Route } from "react-router-dom";
 
-import HeaderNavigationMenuProvider from './state_management/main';
+import HeaderNavigationMenuProvider from './state_management/header_navigation_menu';
 import Header from "./header";
 import Home from "./home" ;
 import ContactUs from './contact';
@@ -51,7 +51,7 @@ const RouteComponents = [
       Title: 'Task 5 page',
       AuthRequired: true
     }
-  ]
+  ];
 
  function Container() {
     return (
