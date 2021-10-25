@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, {useContext, Component } from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, Switch, Route } from "react-router-dom";
 
 import HeaderNavigationMenuProvider from './state_management/header_navigation_menu';
+import FrontPagesComponentsProvider from './state_management/front_pages_components';
+import {FrontPagesComponentsContext} from './state_management/front_pages_components';
+
 import Header from "./header";
 import Home from "./home" ;
 import ContactUs from './contact';
@@ -53,7 +56,9 @@ const RouteComponents = [
     }
   ];
 
- function Container() {
+ function Container(props) {
+  //  const [categories, setCategories] = useContext(FrontPagesComponentsContext);
+
     return (
     <>
       <BrowserRouter >
@@ -74,20 +79,24 @@ const RouteComponents = [
                   <Route path="/Task-4" component={MainTask4}/>
                   <Route path="/Task-5" component={MainTask5}/> */
                   }
+                  {/* <FrontPagesComponentsProvider>
+                  {console.log("FrontPagesComponentsProvider:",value)}
+                  </FrontPagesComponentsProvider> */}
                   {
-                    RouteComponents.map(({Path,Component},key) => {
-                      return(
-                          <Route exact path={Path} component={Component} key={key} />
-                          // <Route exact key={key} path={Path} render={(props) => <Component {...props} />} />
-                          
-                      )
-                    })
-                  }
+                      RouteComponents.map(({Path,Component},key) => {
+                        return(
+                            <Route exact path={Path} component={Component} key={key} />
+                            // <Route exact key={key} path={Path} render={(props) => <Component {...props} />} />
+                            
+                        )
+                      })
+                    }
+                
+                  
                   {/*<Route path="/Task-2" component={()=> <Sitemap  authorized={false}/>} />*/}
               </Switch>
             </div>
           </div>
-
       </BrowserRouter>
       <Footer/>
     </>

@@ -8,7 +8,7 @@ class Footer extends Component {
   render() {
     //https://bootstrapious.com/p/bootstrap-sidebar
     return (
-        <Fragment>
+        <>
             <footer className="footer-area footer--light ">
                 <div className="footer-big ">
                     <div className="container">
@@ -126,7 +126,7 @@ class Footer extends Component {
                     </div>
                 </div>
             </footer>
-        </Fragment>
+        </>
     );
   }
 }
