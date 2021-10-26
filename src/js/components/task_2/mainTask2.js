@@ -32,9 +32,9 @@ function MainTask2(props) {
 
             <Switch>
               <Route exact path={`${props.match.path}`} component={Home} />
-              <Route exact path={"/side-bar-2/about"} component={About} />
-              <Route exact path={"/side-bar-2/users" }component={Users} />
-              <Route exact path={"/side-bar-2/login" }component={Login} />
+              <Route exact path={`${props.match.path}/about`} component={About} />
+              <Route exact path={`${props.match.path}/users` }component={Users} />
+              <Route exact path={`${props.match.path}/login` }component={Login} />
             </Switch>
         </div>
       </Router>

@@ -4,7 +4,7 @@ import {HeaderNavigationMenuContext} from './state_management/header_navigation_
 
 
 function Header(props) {
-  const [menus, setMenus] = useContext(HeaderNavigationMenuContext);
+  const [headerMenu, setHeaderMenu] = useContext(HeaderNavigationMenuContext);
     return (
         <>
             <header className="header">
@@ -17,7 +17,7 @@ function Header(props) {
                   <div id="navbarSupportedContent" className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                     {
-                      menus.map(({path, title}, key) => {
+                      headerMenu.map(({path, title}, key) => {
                        
                         return (
                           

@@ -9,13 +9,13 @@ import {FrontPagesComponentsContext} from './state_management/front_pages_compon
 import Header from "./header";
 import Footer from "./footer";
 
- function Container(props) {
+function Container(props) {
    const [frontPagesComponents, setFrontPagesComponents] = useContext(FrontPagesComponentsContext);
 
     return (
       <>
         <HeaderNavigationMenuProvider>
-          <Header linkData={"value"}/>
+          <Header value={"data"}/>
         </HeaderNavigationMenuProvider>
         <div className="navbar container-fluid"> </div>
         <div className="contentWrapper container-fluid">

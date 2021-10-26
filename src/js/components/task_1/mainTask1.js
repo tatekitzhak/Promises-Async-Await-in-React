@@ -28,8 +28,8 @@ function MainTask1(props) {
             <PageProvider>
               <ContentProvider>
 
-                <Route exact path="/side-bar-1/:a"
-                             render={(props) => <Item {...props} title={`Props through render (PropsPage)`}  name={'Ran'}/>} />
+                <Route exact path={`${props.match.path}`}
+                             render={(props) => <Content {...props} title={`Props through render (PropsPage)`}  name={'Ran'}/>} />
 
                 <Route exact path={`${props.match.path}/:link`}
                              component={(props) => <Item {...props} title={"abc"}/> }/>

@@ -55,7 +55,6 @@ export default function FrontPagesComponentsProvider(props) {
         <FrontPagesComponentsContext.Provider value={[component]}>
             {props.children}
         </FrontPagesComponentsContext.Provider>
-    );
-    
+    ); 
 };
 
