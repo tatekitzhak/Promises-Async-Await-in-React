@@ -1,10 +1,10 @@
 import React, {useState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import {CategoriesContext} from './dataContext';
+import {SidebarNavigationMenuContext} from '../state_management/sidebar_navigation_menu'
 
 function NavigationBar(props){
-  const [categories, setCategories] = useContext(CategoriesContext);
+  const [topics, setTopics] = useContext(SidebarNavigationMenuContext);
 
   const dispatcher = (event) =>{
      //event.preventDefault();
@@ -20,7 +20,7 @@ function NavigationBar(props){
               </div>
               <div className="list-group list-group-flush">
                 {
-                  categories.map((value, index)=>{
+                  topics.map((value, index)=>{
                       return (
                           <Link className="list-group-item list-group-item-action list-group-item-light p-3"
                                 data-txt={`${value.categorie}`}

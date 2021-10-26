@@ -1,7 +1,9 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import {SidebarProvider, PageProvider} from './dataContext';
-import {ContentProvider, ContentContext} from './data_management/contentContext';
+
+import {PageProvider} from './dataContext';
+import {ContentProvider} from './data_management/contentContext';
+import {SidebarNavigationMenuProvider} from '../state_management/sidebar_navigation_menu';
 
 
 import NavigationBar from './navBarTask1';
@@ -16,11 +18,11 @@ function MainTask1(props) {
   return(
     <Router>
       <div className="row">
-        {console.log("MainTask1:",props.match.path)}
+        {console.log("MainTask1:",props)}
         <div className="col-md-3 pull-md-right">
-          <SidebarProvider>
+          <SidebarNavigationMenuProvider>
             <NavigationBar {...props}/>
-          </SidebarProvider>
+          </SidebarNavigationMenuProvider>
         </div>
 
         <div className="col-md-8 pull-md-right border">

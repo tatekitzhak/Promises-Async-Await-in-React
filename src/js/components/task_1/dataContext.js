@@ -7,7 +7,7 @@ export const CategoriesContext = createContext();
 
 export const SidebarProvider = (props) => {
   const [categories, setCategories] = useState([
-    {categorie:"Item 1"},
+    {categorie:"Item 11"},
     {categorie:"Item 2"},
     {categorie:"Item 3"},
     {categorie:"Item 4"},
