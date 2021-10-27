@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -26,7 +27,12 @@ module.exports = {
       },
     plugins: [
       MiniCss,
-      htmlPluginIndex
+      htmlPluginIndex,
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        IScroll: 'iscroll',
+      })
   ],
   devServer: {
     historyApiFallback: true,

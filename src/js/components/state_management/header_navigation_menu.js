@@ -28,6 +28,10 @@ export default function HeaderNavigationMenuProvider(props){
         {
             path: '/task-5',
             title: 'task 5',
+        },
+        {
+            path: '/task-6',
+            title: 'task 6',
         }
     ]);
     return(

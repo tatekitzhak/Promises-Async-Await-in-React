@@ -7,6 +7,7 @@ import MainTask2 from '../task_2/mainTask2';
 import MainTask3 from '../task_3/mainTask3';
 import MainTask4 from "../task_4/mainTask4";
 import MainTask5 from "../task_5/mainTask5";
+import MainTask6 from "../task_6/mainTask6";
 
 export const FrontPagesComponentsContext = createContext();
 
@@ -49,7 +50,12 @@ export default function FrontPagesComponentsProvider(props) {
           Component: MainTask5,
           Title: 'Task 5 page',
           AuthRequired: true
-        }
+        },{
+            Path: '/task-6',
+            Component: MainTask6,
+            Title: 'Task 6 page',
+            AuthRequired: true
+          }
     ]);
     return(
         <FrontPagesComponentsContext.Provider value={[component]}>
