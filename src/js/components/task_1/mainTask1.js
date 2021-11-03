@@ -29,7 +29,7 @@ function MainTask1(props) {
           <Switch>
             <PageProvider>
               <ContentProvider>
-
+              {console.log("MainTask1 Switch:",props)}
                 <Route exact path={`${props.match.path}`}
                              render={(props) => <Content {...props} title={`Props through render (PropsPage)`}  name={'Ran'}/>} />
 

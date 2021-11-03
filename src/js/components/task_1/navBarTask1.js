@@ -6,11 +6,6 @@ import {SidebarNavigationMenuContext} from '../state_management/sidebar_navigati
 function NavigationBar(props){
   const [topics, setTopics] = useContext(SidebarNavigationMenuContext);
 
-  const dispatcher = (event) =>{
-     //event.preventDefault();
-      //console.log("SideBar:", event.target.dataset.txt);
-  }
-
   return (
     <>
       <div id="sidebar-wrapper">
@@ -24,7 +19,6 @@ function NavigationBar(props){
                       return (
                           <Link className="list-group-item list-group-item-action list-group-item-light p-3"
                                 data-txt={`${value.categorie}`}
-                                onClick={dispatcher}
                                 key={index}
                                 to={{
                                       pathname:`${props.match.path}/${value.categorie}`,
