@@ -8,19 +8,19 @@ const initialState = {
 
 function handleContant(state, action) {
   switch(action.type){
-    case 'Item 1':
+    case 'Item-1':
       return {
         topic: action.type
       };
-    case 'Item 2':
+    case 'Item-2':
       return {
         topic: action.type
       };
-    case 'Item 3':
+    case 'Item-3':
       return {
         topic: action.type
       };
-    case 'Item 4':
+    case 'Item-4':
       return {
         topic: action.type
       };

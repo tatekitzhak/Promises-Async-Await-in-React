@@ -23,7 +23,7 @@ function NavigationBar(props){
                                 to={{
                                       pathname:`${props.match.path}/${value.categorie}`,
                                       state: { fromNotifications: true,
-                                               name: "Ran"
+                                               value: []
                                              }
                                       }}>
                           {value.categorie}
