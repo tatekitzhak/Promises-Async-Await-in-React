@@ -1,5 +1,7 @@
 import React, {useState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import {TaskComponentsContext} from '../../../global_state_management/task2ComponentsProvider';
 import NavigationBar from './navBarTask2';
 
 import Home from './pages/home';
@@ -9,7 +11,8 @@ import Login from './pages/login';
 
 
 function MainTask2(props) {
-
+  // const [value] = useContext(TaskComponentsContext);
+  const [value, setFrontPagesComponents] = useContext(TaskComponentsContext);
 
   return (
     <>
@@ -21,13 +24,7 @@ function MainTask2(props) {
               </div>
 
           </section>
-            {console.log("MainTask2:",props.match.path)
-              // <Switch>
-              //   <Route exact path="/side-bar-2/" component={Home} />
-              //
-              //   <Route exact path="/side-bar-2/:id" render={(props) => (<About {...props} post="Posts"/>)} />
-              // </Switch>
-          }
+            {console.log("MainTask2:",value)}
           <section className="main_task_2_container">
             <Switch>
               <Route exact path={`${props.match.path}`} component={Home} />
