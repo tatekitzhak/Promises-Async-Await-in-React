@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-import {PageProvider} from './dataContext';
-import {ContentProvider} from './data_management/contentContext';
-import {SidebarNavigationMenuProvider} from '../state_management/sidebar_navigation_menu';
+import {SideNavBarProvider} from '../../../global_state_management/sideNavBarProvider';
 
 
 import NavigationBar from './navBarTask1';
@@ -20,15 +18,13 @@ function MainTask1(props) {
       <div className="row">
         {console.log("MainTask1:",props)}
         <div className="col-md-3 pull-md-right">
-          <SidebarNavigationMenuProvider>
+          <SideNavBarProvider>
             <NavigationBar {...props}/>
-          </SidebarNavigationMenuProvider>
+          </SideNavBarProvider>
         </div>
 
         <div className="col-md-8 pull-md-right border">
           <Switch>
-            <PageProvider>
-              <ContentProvider>
               {console.log("MainTask1 Switch:",props)}
                 <Route exact path={`${props.match.path}`}
                              render={(props) => <Content {...props} title={`Props through render (PropsPage)`}  name={'Ran'}/>} />
@@ -36,9 +32,7 @@ function MainTask1(props) {
                 <Route exact path={`${props.match.path}/:link`}
                              component={(props) => <Item {...props} title={"abc"}/> }/>
 
-              </ContentProvider>
 
-            </PageProvider>
           </Switch>
         </div>
 

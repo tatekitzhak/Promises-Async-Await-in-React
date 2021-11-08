@@ -1,10 +1,10 @@
 import React, {useState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import {SidebarNavigationMenuContext} from '../state_management/sidebar_navigation_menu'
+import {SideNavBarContext} from '../../../global_state_management/sideNavBarProvider'
 
 function NavigationBar(props){
-  const [topics, setTopics] = useContext(SidebarNavigationMenuContext);
+  const [topics, setTopics] = useContext(SideNavBarContext);
 
   return (
     <>

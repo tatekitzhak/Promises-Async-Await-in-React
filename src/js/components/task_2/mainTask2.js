@@ -14,14 +14,13 @@ function MainTask2(props) {
   return (
     <>
       <Router>
-        <div >
-            <div className="border-end bg-white">
-                <div className="sidebar-heading border-bottom bg-light text-center">
-                  <h1>Task 2 </h1>
-                  <NavigationBar {...props}/>
-                </div>
+        <div className="main_task_2">
+          <section className="border-end bg-white nav_bar_2">
+              <div className="sidebar-heading border-bottom bg-light text-center">
+                <NavigationBar {...props}/>
+              </div>
 
-            </div>
+          </section>
             {console.log("MainTask2:",props.match.path)
               // <Switch>
               //   <Route exact path="/side-bar-2/" component={Home} />
@@ -29,13 +28,14 @@ function MainTask2(props) {
               //   <Route exact path="/side-bar-2/:id" render={(props) => (<About {...props} post="Posts"/>)} />
               // </Switch>
           }
-
+          <section className="main_task_2_container">
             <Switch>
               <Route exact path={`${props.match.path}`} component={Home} />
               <Route exact path={`${props.match.path}/about`} component={About} />
               <Route exact path={`${props.match.path}/users` }component={Users} />
               <Route exact path={`${props.match.path}/login` }component={Login} />
             </Switch>
+          </section>
         </div>
       </Router>
     </>

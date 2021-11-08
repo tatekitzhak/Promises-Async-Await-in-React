@@ -1,9 +1,8 @@
 import React, {useContext, useState} from 'react';
 
+export const SideNavBarContext = React.createContext({});
 
-export const SidebarNavigationMenuContext = React.createContext({});
-
-export function SidebarNavigationMenuProvider(props){
+export function SideNavBarProvider(props){
     const [topics, topicsSet] = useState([
         {categorie:"Item-1"},
         {categorie:"Item-2"},
@@ -15,9 +14,9 @@ export function SidebarNavigationMenuProvider(props){
     ]);
     return(
         <>
-            <SidebarNavigationMenuContext.Provider value={[topics]}>
+            <SideNavBarContext.Provider value={[topics]}>
                 {props.children}
-            </SidebarNavigationMenuContext.Provider>
+            </SideNavBarContext.Provider>
         </>
     );
 };

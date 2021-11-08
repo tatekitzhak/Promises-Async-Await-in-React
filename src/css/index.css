@@ -71,17 +71,6 @@ header{
 }
 
 
-/* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #05A2EA;
-    }
-
-    .navbar .navbar-brand, .navbar .nav-link {
-        color: #fff;
-    }
-}
-
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -205,21 +194,7 @@ table.table-bordered > tbody > tr > td{
 .margin-bottom-none { margin-bottom: 0; }
 .modal-body .radio label,.modal-body .checkbox label { display:block; }
 .modal-footer {margin-top: 0px;}
-@media screen and (max-width: 325px){
-    .btn-close {
-        margin-top: 5px;
-        width: 100%;
-    }
-    .btn-results {
-        margin-top: 5px;
-        width: 100%;
-    }
-    .btn-vote{
-        margin-top: 5px;
-        width: 100%;
-    }
 
-}
 .modal-footer .btn+.btn {
     margin-left: 0px;
 }
@@ -391,11 +366,7 @@ a {
 .widget-about .contact-details li a {
  color:#5867dd
 }
-@media (max-width:991px) {
- .footer-menu {
-  padding-left:0
- }
-}
+
 
 /* ---------------------------------------------------
     WORK FLOW SHOW
@@ -592,27 +563,7 @@ a.article:hover {
     width: 100%;
 }
 
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
 
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #content {
-        width: 100%;
-    }
-    #content.active {
-        width: calc(100% - 250px);
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
 #sidebar-wrapper {width: fit-content;}
 /*
 Flexible drawer menu using jQuery, iScroll and CSS.
@@ -687,3 +638,64 @@ li{
         
     }
 } */
+
+/* ---------------------------------------------------
+    MainTask2
+----------------------------------------------------- */
+.main_task_2{
+    display: grid;
+    grid-template-columns: 25% 100%;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #05A2EA;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #fff;
+    }
+}
+@media (max-width:991px) {
+    .footer-menu {
+     padding-left:0
+    }
+}
+@media screen and (max-width: 325px){
+    .btn-close {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .btn-results {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .btn-vote{
+        margin-top: 5px;
+        width: 100%;
+    }
+
+}
