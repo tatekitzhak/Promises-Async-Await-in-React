@@ -12,7 +12,7 @@ import Login from './pages/login';
 
 function MainTask2(props) {
   // const [value] = useContext(TaskComponentsContext);
-  const [value, setFrontPagesComponents] = useContext(TaskComponentsContext);
+  const [routes, setRoutes] = useContext(TaskComponentsContext);
 
   return (
     <>
@@ -24,13 +24,23 @@ function MainTask2(props) {
               </div>
 
           </section>
-            {console.log("MainTask2:",value)}
+            {console.log("MainTask2:",routes)}
           <section className="main_task_2_container">
             <Switch>
-              <Route exact path={`${props.match.path}`} component={Home} />
+              {/* <Route exact path={`${props.match.path}`} component={Home} />
               <Route exact path={`${props.match.path}/about`} component={About} />
               <Route exact path={`${props.match.path}/users` }component={Users} />
-              <Route exact path={`${props.match.path}/login` }component={Login} />
+              <Route exact path={`${props.match.path}/login` }component={Login} /> */}
+              {routes.map((route, index) => {
+                return (
+                  <Route
+                    key={index}
+                    path={`${props.match.path}${route.path}`} 
+                    exact={route.exact}
+                    children={<route.component />}
+                  />
+              )}
+            )}
             </Switch>
           </section>
         </div>

@@ -8,10 +8,9 @@ import MainTask3 from '../js/components/task_3/mainTask3';
 import MainTask4 from '../js/components/task_4/mainTask4';
 import MainTask5 from '../js/components/task_5/mainTask5';
 import MainTask6 from '../js/components/task_6/mainTask6';
+import PageNotFound from '../js/components/pages/pageNotFound';
 
 export const FrontPagesComponentsContext = createContext();
-
-
 
 export default function FrontPagesComponentsProvider(props) {
     const [component, setComponent] = useState([
@@ -53,6 +52,11 @@ export default function FrontPagesComponentsProvider(props) {
         },{
             Path: '/task-6',
             Component: MainTask6,
+            Title: 'Task 6 page',
+            AuthRequired: true
+          },{
+            Path: '*',
+            Component: PageNotFound,
             Title: 'Task 6 page',
             AuthRequired: true
           }

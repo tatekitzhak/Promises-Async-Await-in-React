@@ -7,18 +7,19 @@ export default function TaskComponentsProvider(props) {
         {
             path: "/",
             exact: true,
-            sidebar: () => <div>home!</div>,
-            main: () => <h2>Home</h2>
+            component: () => <h2>Home</h2>
           },
           {
-            path: "/bubblegum",
-            sidebar: () => <div>bubblegum!</div>,
-            main: () => <h2>Bubblegum</h2>
+            path: '/about',
+            component: () => <h2>About</h2>
           },
           {
-            path: "/shoelaces",
-            sidebar: () => <div>shoelaces!</div>,
-            main: () => <h2>Shoelaces</h2>
+            path: '/users',
+            component: () => <h2>Users</h2>
+          },
+          {
+            path: '/login',
+            component: () => <h2>Login</h2>
           }
     ]);
    return(

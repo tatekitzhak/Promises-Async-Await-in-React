@@ -646,6 +646,34 @@ li{
     display: grid;
     grid-template-columns: 25% 100%;
 }
+/* ---------------------------------------------------
+   404 Page Not Found 
+----------------------------------------------------- */
+.not_found_container {
+    background-color: #95c2de;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: auto;
+    height: 600px;
+    width: 600px;
+  }
+  .not_found_msg {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  
+.not_found_msg > .header_err {
+      color: #ffffff;
+      font-size: 11rem;
+      
+    }
+  .not_found_msg > p > a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .not_found_msg > p > a:hover {
+    text-decoration: underline;
+  }
 
 
 /* ---------------------------------------------------
