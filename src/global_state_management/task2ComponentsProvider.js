@@ -1,4 +1,5 @@
 import React, {useState, createContext} from 'react';
+import DemoPage from '../js/components/pages/demo';
 
 export const TaskComponentsContext = createContext();
 
@@ -7,20 +8,20 @@ export default function TaskComponentsProvider(props) {
         {
             path: "/",
             exact: true,
-            component: () => <h2>Home</h2>
-          },
-          {
+            component: <DemoPage data={'Home'}/>         
+        },
+        {
             path: '/about',
-            component: () => <h2>About</h2>
-          },
-          {
+            component: <DemoPage data={'about'}/>
+        },
+        {
             path: '/users',
-            component: () => <h2>Users</h2>
-          },
-          {
+            component: <DemoPage data={'users'}/>
+        },
+        {
             path: '/login',
-            component: () => <h2>Login</h2>
-          }
+            component: <DemoPage data={'login'}/>
+        }
     ]);
    return(
     <TaskComponentsContext.Provider value={[routes]}>
