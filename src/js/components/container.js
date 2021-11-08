@@ -2,9 +2,10 @@ import React, {useContext, Component } from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, Switch, Route } from "react-router-dom";
 
-import HeaderNavigationMenuProvider from './state_management/header_navigation_menu';
-import FrontPagesComponentsProvider from './state_management/front_pages_components';
-import {FrontPagesComponentsContext} from './state_management/front_pages_components';
+import HeaderNavigationMenuProvider from '../../global_state_management/header_navigation_menu';
+       
+import FrontPagesComponentsProvider from '../../global_state_management/front_pages_components';
+import {FrontPagesComponentsContext} from '../../global_state_management/front_pages_components';
 
 import Header from "./header";
 import Footer from "./footer";

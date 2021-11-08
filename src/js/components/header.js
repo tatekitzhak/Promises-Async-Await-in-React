@@ -1,6 +1,6 @@
 import React, {useContext}from "react";
 import { Link } from "react-router-dom";
-import {HeaderNavigationMenuContext} from './state_management/header_navigation_menu';
+import {HeaderNavigationMenuContext} from '../../global_state_management/header_navigation_menu';
 
 
 function Header(props) {

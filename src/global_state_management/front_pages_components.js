@@ -1,13 +1,13 @@
 import React, {useState, createContext}from 'react';
 
-import Home from "../home" ;
-import ContactUs from '../contact';
-import MainTask1 from '../task_1/mainTask1';
-import MainTask2 from '../task_2/mainTask2';
-import MainTask3 from '../task_3/mainTask3';
-import MainTask4 from "../task_4/mainTask4";
-import MainTask5 from "../task_5/mainTask5";
-import MainTask6 from "../task_6/mainTask6";
+import Home from "../js/components/home" ;
+import ContactUs from '../js/components/contact';
+import MainTask1 from '../js/components/task_1/mainTask1';
+import MainTask2 from '../js/components/task_2/mainTask2';
+import MainTask3 from '../js/components/task_3/mainTask3';
+import MainTask4 from '../js/components/task_4/mainTask4';
+import MainTask5 from '../js/components/task_5/mainTask5';
+import MainTask6 from '../js/components/task_6/mainTask6';
 
 export const FrontPagesComponentsContext = createContext();
 
