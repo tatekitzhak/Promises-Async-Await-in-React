@@ -24,27 +24,19 @@ function MainTask2(props) {
               </div>
 
           </section>
-            {console.log("MainTask2:",routes)}
+            
           <section className="main_task_2_container">
             <Switch>
-              {/* <Route exact path={`${props.match.path}`} component={Home} />
-              <Route exact path={`${props.match.path}/about`} component={About} />
-              <Route exact path={`${props.match.path}/users` }component={Users} />
-              <Route exact path={`${props.match.path}/login` }component={Login} /> */}
+            
               {
                 
                 routes.map((route, index) => {
                   return (
-                    /* <Route
-                key={index}
-                path={`${props.match.path}${route.path}`} 
-                exact={route.exact}
-                children={<route.component.type />}
-              /> */
                     <Route key={index}
                         path={`${props.match.path}${route.path}`} 
                         exact={route.exact}>
-                      <route.component.type  {...props} value={route.component.props}/>
+                      <route.component.type  {...props} sectionTask2={route.component.props}/>
+                      {console.log(`MainTask2:${props.match.path}${route.path}`)}
                     </Route>
                   )})
             }

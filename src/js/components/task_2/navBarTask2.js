@@ -33,9 +33,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
                                       key={key}
                                       
                                       to={{
-                                            pathname:`${props.match.path}${path}`
+                                            pathname:`${props.match.url}${path}`
                                             }}>
                                   {name}
+                                  {console.log(`NavigationBar:${props.match.url}${path}`)}
                                 </Link>
                               )
                             })

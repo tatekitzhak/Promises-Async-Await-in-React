@@ -30,6 +30,7 @@ export default function FrontPagesComponentsProvider(props) {
             Title: 'Task 1 page',
             AuthRequired: true
         },{
+            //Path: '/task-2/:link?',
             Path: '/task-2',
             Component: MainTask2,
             Title: 'Task 2 page',
