@@ -3,8 +3,22 @@ import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/dropdown';
 import './css/index.scss';
 import './css/index.css';
-import  "./js/components/container";
 import $ from 'jquery';
+/* project */
+//import "./js/components/container";
+
+/* app1 */
+//import './app1/app1';
+
+/* App2 */
+import './app2/app2'
+
+
+
+
+
+
+
 
 // $(function () {
 //     $(window).on('scroll', function () {
