@@ -2,35 +2,15 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import Composition from './composition';
-import Footer from '../js/components/footer';
+//import Footer from '../js/components/footer';
 
-function Header(props) {
-    return(
-    <>
-        <h1>Header</h1>
-    </>);
-};
+import Header from './pages/header';
 
-function Main(props) {
-    return(
-    <>
-        <h1>Main</h1>
-    </>);
-};
+import Main from './pages/main';
 
-function SideBar(props) {
-    return(
-    <>
-        <h1>SideBar</h1>
-    </>);
-};
+import SideBar from './pages/sidebar';
 
-function Foooter(props) {
-    return(
-    <>
-        <h1>Foooter</h1>
-    </>);
-};
+import Footer from './pages/footer';
 
 class App2 extends Component{
     constructor(props) {
