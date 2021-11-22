@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import {TaskComponentsContext} from '../../../global_state_management/task2ComponentsProvider';
 import NavigationBar from './navBarTask2';
@@ -22,23 +22,31 @@ function MainTask2(props) {
               <div className="sidebar-heading border-bottom bg-light text-center">
                 <NavigationBar {...props}/>
               </div>
-
+          {console.log('MainTask2:',props)}
           </section>
             
           <section className="main_task_2_container">
             <Switch>
             
               {
+                 <Route path={`${props.match.url}/:id`} 
+                    render={(props)=><Home {...props} sectionTask2={'From MainTask2'}/>} />
                 
-                routes.map((route, index) => {
+                /* routes.map((route, index) => {
+                  console.log('index:', index);
+                  <Home {...props} sectionTask2={'From MainTask2'}/>
                   return (
-                    <Route key={index}
-                        path={`${props.match.path}${route.path}`} 
-                        exact={route.exact}>
+                     <Route key={index}
+                        path={`${props.match.path}/:link`} 
+                        exact={route.exact} >
                       <route.component.type  {...props} sectionTask2={route.component.props}/>
-                      {console.log(`MainTask2:${props.match.path}${route.path}`)}
-                    </Route>
-                  )})
+                      {console.log(`MainTask2:${props.match.url}${route.path}`)}
+                    </Route> 
+                    
+                    <Route key={index} path={`${props.match.url}/:${index}`} 
+                    render={(props)=><Home {...props} sectionTask2={'From MainTask2'}/>} /> 
+                    
+                  )}) */
             }
             </Switch>
           </section>

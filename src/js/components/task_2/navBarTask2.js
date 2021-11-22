@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
   function NavigationBar(props) {
     const navLinks = [{
-                        path: '/',
+                        path: '/home',
                         name: 'Home',
                       }, {
                         path: '/about',
@@ -33,7 +33,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
                                       key={key}
                                       
                                       to={{
-                                            pathname:`${props.match.url}${path}`
+                                            pathname:`${props.match.url}${'/'+key}`
                                             }}>
                                   {name}
                                   {console.log(`NavigationBar:${props.match.url}${path}`)}

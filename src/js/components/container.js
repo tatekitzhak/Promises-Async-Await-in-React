@@ -16,7 +16,7 @@ function Container(props) {
     return (
       <>
         <HeaderNavigationMenuProvider>
-          <Header value={"data"}/>
+          <Header/>
         </HeaderNavigationMenuProvider>
         <div className="navbar container-fluid"> </div>
         <div className="contentWrapper container-fluid">
@@ -25,9 +25,10 @@ function Container(props) {
                 <Switch>
                     {
                         frontPagesComponents.map(({Path,Component},key) => {
+                          console.log('Container:',Path)
                           return(
-                              <Route exact path={Path} component={Component} key={key} />
-                              // <Route exact key={key} path={Path} render={(props) => <Component {...props} />} />
+                              //<Route exact path={Path} component={Component} key={key} />
+                              <Route exact key={key} path={`${Path}`} render={(props) => <Component {...props} path={Path}  container={'From Container'}/>} />
                               
                           )
                         })

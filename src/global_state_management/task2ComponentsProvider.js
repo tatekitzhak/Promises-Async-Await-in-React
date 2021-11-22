@@ -6,7 +6,7 @@ export const TaskComponentsContext = createContext();
 export default function TaskComponentsProvider(props) {
     const [routes, setComponent] = useState([
         {
-            path: "/",
+            path: "/home",
             exact: true,
             component: <DemoPage data={'Home'}/>         
         },

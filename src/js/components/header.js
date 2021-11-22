@@ -15,6 +15,7 @@ function Header(props) {
                   </button>
 
                   <div id="navbarSupportedContent" className="collapse navbar-collapse">
+                    
                     <ul className="navbar-nav ml-auto">
                     {
                       headerMenu.map(({path, title}, key) => {
@@ -27,6 +28,7 @@ function Header(props) {
                                               pathname:`${path}`
                                               }}>
                                     {title}
+                                    {console.log('Header:',path)}
                                     {/* <span class="sr-only">(current)</span> */}
                                   </Link>
                                 </li>
