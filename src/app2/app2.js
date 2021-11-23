@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom';
 import Composition from './composition';
 //import Footer from '../js/components/footer';
 
-import Header from './pages/header';
+import Header from './ui-components-2/pages/header';
 
-import Main from './pages/main';
+import Main from './ui-components-2/pages/main';
 
-import SideBar from './pages/sidebar';
+import SideBar from './ui-components-2/pages/sidebar';
 
-import Footer from './pages/footer';
+import Footer from './ui-components-2/pages/footer';
 
 class App2 extends Component{
     constructor(props) {

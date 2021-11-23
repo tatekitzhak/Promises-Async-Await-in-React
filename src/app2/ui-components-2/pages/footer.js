@@ -1,8 +1,10 @@
 import React from 'react';
 
-import Footer from '../js/components/footer';
-
-function Foooter(props) {
+/**
+ * 
+ * 
+ */
+function Footer(props) {
     return(
     <>
         <h1>Foooter</h1>

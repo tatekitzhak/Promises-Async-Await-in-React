@@ -8,15 +8,20 @@ import $ from 'jquery';
 //import "./js/components/container";
 
 /* app1 */
-//import './app1/app1';
+//import './ui-components-1/app1';
 
 /* App2 */
-import './app2/app2'
+import './ui-components-2/app2'
 
 
 
 
+/************************************ react js user interface folder structure
+ * 
+ * https://dev.to/larswaechter/how-i-structure-my-react-projects-jii
+ * https://www.taniarascia.com/react-architecture-directory-structure/
 
+**************************************/
 
 
 
