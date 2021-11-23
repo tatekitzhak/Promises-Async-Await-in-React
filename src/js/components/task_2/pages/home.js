@@ -10,7 +10,7 @@ function Home(props) {
                 <h1>{props.match.url}</h1>
               </div>
               <div className="list-group list-group-flush">
-                {console.log('Home:: ', props)}
+                {console.log('Home: ', props)}
               </div>
           </div>
       </div>

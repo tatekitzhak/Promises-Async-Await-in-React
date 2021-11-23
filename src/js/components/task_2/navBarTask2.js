@@ -22,7 +22,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
         <div id="sidebar-wrapper">
             <div className="border-end bg-white">
                 <div className="sidebar-heading border-bottom bg-light">
-                  <h1>Navigation Bar Task 2 </h1>
+                  <h1>NavBar Task 2 </h1>
                 </div>
                 <div className="list-group list-group-flush">
 

@@ -25,10 +25,12 @@ function Container(props) {
                 <Switch>
                     {
                         frontPagesComponents.map(({Path,Component},key) => {
-                          console.log('Container:',Path)
+                         /*  console.log('Container:',Path) */
                           return(
                               //<Route exact path={Path} component={Component} key={key} />
-                              <Route exact key={key} path={`${Path}`} render={(props) => <Component {...props} path={Path}  container={'From Container'}/>} />
+                              <Route exact key={key} path={`${Path}`} 
+                                render={(props) => <Component {...props} path={Path}  
+                                container={'From Container'}/>} />
                               
                           )
                         })

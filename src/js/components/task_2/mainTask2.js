@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useHistory, useParams } from 'react-router-dom'
 
 import {TaskComponentsContext} from '../../../global_state_management/task2ComponentsProvider';
 import NavigationBar from './navBarTask2';
@@ -13,7 +14,7 @@ import Login from './pages/login';
 function MainTask2(props) {
   // const [value] = useContext(TaskComponentsContext);
   const [routes, setRoutes] = useContext(TaskComponentsContext);
-
+  const { id } = useParams()
   return (
     <>
       <Router>
@@ -22,15 +23,16 @@ function MainTask2(props) {
               <div className="sidebar-heading border-bottom bg-light text-center">
                 <NavigationBar {...props}/>
               </div>
-          {console.log('MainTask2:',props)}
           </section>
             
           <section className="main_task_2_container">
+            {console.log('MainTask2:', props)}
             <Switch>
             
               {
                  <Route path={`${props.match.url}/:id`} 
-                    render={(props)=><Home {...props} sectionTask2={'From MainTask2'}/>} />
+                    render={(props)=><About {...props} sectionTask2={'From MainTask2'}/>} />
+                
                 
                 /* routes.map((route, index) => {
                   console.log('index:', index);
