@@ -41,10 +41,10 @@ function Subtopic(props) {
         <div className="box a">
           <h3>Menu: {topicName}</h3>
           <ul>
-            <li><Link to={`${path}/subtopic-1`} > 1</Link></li>
-            <li><Link to={`${path}/subtopic-2`} > 2</Link></li>
-            <li><Link to={`${path}/subtopic-3`} > 3</Link></li>
-            <li><Link to={`${path}/subtopic-4`} > 4</Link></li>
+            <li><Link to={`${path}/item-1`} > 1</Link></li>
+            <li><Link to={`${path}/item-2`} > 2</Link></li>
+            <li><Link to={`${path}/item-3`} > 3</Link></li>
+            <li><Link to={`${path}/item-4`} > 4</Link></li>
           </ul>
         </div>
       </section>
@@ -66,4 +66,4 @@ function Subtopic(props) {
 };
 
 
-export default Topics;
+export default Subtopic;

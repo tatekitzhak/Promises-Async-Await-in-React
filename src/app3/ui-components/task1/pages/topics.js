@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Subtopic from './subtopic';
 
 
 function Topics(props) {
   const [topicName, setTopicName] = useState('');
   const path = props.match.params.link;
+  const link = props.match.url;
   const fetchData = () => {
     switch ('topic-1') {
       case 'topic-1':
@@ -31,36 +33,38 @@ function Topics(props) {
 
   return (
     <>
-      <div className="border-end bg-white">
+      <Router>
+      <section>
         <div className="sidebar-heading border-bottom bg-light">
-          <h1>Topics: {topicName}</h1>
+          <h1>{topicName}</h1>
         </div>
-        {console.log("Topics:", props.match.params)}
-      </div>
-      <section className="categories_wrapper">
-        <div className="box a">
-          <h3>Menu: {topicName}</h3>
-          <ul>
-            <li><Link to={`${path}/subtopic-1`} >Subtopic 1</Link></li>
-            <li><Link to={`${path}/subtopic-2`} >Subtopic 2</Link></li>
-            <li><Link to={`${path}/subtopic-3`} >Subtopic 3</Link></li>
-            <li><Link to={`${path}/subtopic-4`} >Subtopic 4</Link></li>
-          </ul>
+        {console.log("Menu:", props.match.params)}
+        <div className="categories_wrapper">
+          <h3> Menu:</h3>
+          <div className="box a">
+            <ul>
+              <li><Link to={`${path}/subtopic-1`} >Subtopic 1</Link></li>
+              <li><Link to={`${path}/subtopic-2`} >Subtopic 2</Link></li>
+              <li><Link to={`${path}/subtopic-3`} >Subtopic 3</Link></li>
+              <li><Link to={`${path}/subtopic-4`} >Subtopic 4</Link></li>
+            </ul>
+          </div>
         </div>
       </section>
       <section>
         <div className="col-md-8 pull-md-right border">
-          {console.log('Topics:', props.match)}
+          {console.log('Topics:', link)}
           <Switch>
-            {/* <Route exact path={`${param}`}
-              render={(props) => <Subtopic {...props} msg={'From Task1 To TopicsList'} />} />
+            <Route exact path={`${link}/subtopic-1`}
+              render={(props) => <Subtopic {...props} msg={'From Task1 To Subtopic'} />} />
 
-            <Route exact path={`${path}/:link`}
-              render={(props) => <Subtopic {...props} msg={'From Task1 To Topics'} />} />
- */}
+            <Route exact path={`${link}/subtopic-1/:link`}
+              render={(props) => <Subtopic {...props} msg={'From Task1 To Subtopic'} />} />
+
           </Switch>
         </div>
       </section>
+      </Router>
     </>
   );
 };
