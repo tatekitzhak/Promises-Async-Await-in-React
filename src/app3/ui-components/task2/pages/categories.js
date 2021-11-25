@@ -17,28 +17,28 @@ function Categories(props) {
                 <div className="box a">
                     <h3>A</h3>
                     <ul>
-                        <li>A</li>
-                        <li>B</li>
-                        <li>C</li>
-                        <li>D</li>
+                        <li><Link to="/a" >A</Link></li>
+                        <li><Link to="/b" >b</Link></li>
+                        <li><Link to="/c" >C</Link></li>
+                        <li><Link to="/d" >D</Link></li>
                     </ul>
                 </div>
                 <div className="box b">
                     <h3>B</h3>
                     <ul>
-                        <li>A</li>
-                        <li>B</li>
-                        <li>C</li>
-                        <li>D</li>
+                        <li><Link to="/a" >A</Link></li>
+                        <li><Link to="/b" >B</Link></li>
+                        <li><Link to="/c" >C</Link></li>
+                        <li><Link to="/d" >D</Link></li>
                     </ul>
                 </div>
                 <div className="box c">
                     <h3>C</h3>
                     <ul>
-                        <li>A</li>
-                        <li>B</li>
-                        <li>C</li>
-                        <li>D</li>
+                        <li><Link to="/a" >A</Link></li>
+                        <li><Link to="/b" >B</Link></li>
+                        <li><Link to="/c" >C</Link></li>
+                        <li><Link to="/d" >D</Link></li>
                     </ul>
                 </div>
 
