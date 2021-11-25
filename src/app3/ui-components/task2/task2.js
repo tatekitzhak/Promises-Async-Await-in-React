@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 /* import SideBar from './sideBar'; */
-
+import Categories from './pages/categories';
 import Home from './pages/home';
 import About from './pages/about';
 import Users from './pages/users';
@@ -40,6 +40,8 @@ function Task2(props) {
           }
           <section>
             <Switch>
+            <Route exact path={`${path}`}
+                render={(props) => <Categories {...props} msg={'From Task2 To Categories'} />} />
               <Route exact path={`${path}/home`}
                 render={(props) => <Home {...props} msg={'From Task2 To Home'} />} />
 

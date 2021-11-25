@@ -33,7 +33,7 @@ function Task1(props) {
               <Route exact path={`${param}`}
                       render={(props) => <Item {...props} msg={'From Task1 To Item'} />} />
 
-              <Route exact path={`/:link/:link`}
+              <Route exact path={`${param}/:link`}
                       render={(props) => <Topics {...props} msg={'From Task1 To Topics'} />} />
 
           </Switch>

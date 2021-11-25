@@ -3,6 +3,7 @@ import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/dropdown';
 import './css/index.scss';
 import './css/index.css';
+import './css/app3.css';
 import $ from 'jquery';
 
 /* project */

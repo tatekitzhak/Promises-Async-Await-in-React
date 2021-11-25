@@ -3,20 +3,20 @@ import { useHistory, useParams } from 'react-router-dom'
 
 
 function Topics(props) {
-  const path = props.match.url
+  const path = props.match.params.link;
   const fetchData = () => {
-    switch (path) {
-      case 'Topics-1':
+    switch ('topic-1') {
+      case 'topic-1':
         return (`${path}`);
-      case 'Topics-2':
+      case 'topic-2':
         return (`${path}`);
-      case 'Topics-3':
+      case 'topic-3':
         return (`${path}`);
-      case 'Topics-4':
+      case 'topic-4':
         return (`${path}`);
-      case 'Topics-5':
+      case 'topic-5':
         return (`${path}`);
-      case 'Topics-6':
+      case 'topic-6':
         return (`${path}`);
       default:
         return ('Default');
@@ -32,7 +32,7 @@ function Topics(props) {
             <h1>Topics: {fetchData()}</h1>
           </div>
           <div className="list-group list-group-flush">
-            {console.log("Topics:", props)}
+            {console.log("Topics:", props.match.params)}
           </div>
         </div>
       </div>
