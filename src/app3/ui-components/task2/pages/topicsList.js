@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function Categories(props) {
+function TopicsList(props) {
 
     return (
         <>
 
             <div className="border-end bg-white">
                 <div className="sidebar-heading border-bottom bg-light">
-                    <h1>Categories</h1>
+                    <h1>TopicsList</h1>
                 </div>
-                {console.log("Categories:", props)}
+                {console.log("TopicsList:", props)}
             </div>
 
             <section className="categories_wrapper">
@@ -48,4 +48,4 @@ function Categories(props) {
 };
 
 
-export default Categories;
+export default TopicsList;

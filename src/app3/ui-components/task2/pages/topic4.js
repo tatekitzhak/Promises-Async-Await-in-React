@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-function Users(props) {
+function Topic4(props){
 
   return (
     <>
       <div className="border-end bg-white">
         <div className="sidebar-heading border-bottom bg-light">
-          <h1>Users</h1>
+          <h1>Topic4</h1>
         </div>
-        {console.log("Users:", props)}
+        {console.log("Topic4:", props)}
       </div>
 
       <section className="categories_wrapper">
@@ -28,4 +28,4 @@ function Users(props) {
 };
 
 
-export default Users;
+export default Topic4;

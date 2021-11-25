@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
-function Topics(props) {
+function Subtopic(props) {
   const [topicName, setTopicName] = useState('');
   const path = props.match.params.link;
   const fetchData = () => {
@@ -33,24 +33,24 @@ function Topics(props) {
     <>
       <div className="border-end bg-white">
         <div className="sidebar-heading border-bottom bg-light">
-          <h1>Topics: {topicName}</h1>
+          <h1>Subtopic: {topicName}</h1>
         </div>
-        {console.log("Topics:", props.match.params)}
+        {console.log("Subtopic:", props.match.params)}
       </div>
       <section className="categories_wrapper">
         <div className="box a">
           <h3>Menu: {topicName}</h3>
           <ul>
-            <li><Link to={`${path}/subtopic-1`} >Subtopic 1</Link></li>
-            <li><Link to={`${path}/subtopic-2`} >Subtopic 2</Link></li>
-            <li><Link to={`${path}/subtopic-3`} >Subtopic 3</Link></li>
-            <li><Link to={`${path}/subtopic-4`} >Subtopic 4</Link></li>
+            <li><Link to={`${path}/subtopic-1`} > 1</Link></li>
+            <li><Link to={`${path}/subtopic-2`} > 2</Link></li>
+            <li><Link to={`${path}/subtopic-3`} > 3</Link></li>
+            <li><Link to={`${path}/subtopic-4`} > 4</Link></li>
           </ul>
         </div>
       </section>
       <section>
         <div className="col-md-8 pull-md-right border">
-          {console.log('Topics:', props.match)}
+          {console.log('Subtopic:', props.match)}
           <Switch>
             {/* <Route exact path={`${param}`}
               render={(props) => <Subtopic {...props} msg={'From Task1 To TopicsList'} />} />

@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function Login(props){
+function Topic1(props) {
 
   return (
     <>
       <div className="border-end bg-white">
         <div className="sidebar-heading border-bottom bg-light">
-          <h1>Login</h1>
+          <h1>Topic1</h1>
         </div>
-        {console.log("Login:", props)}
+        {console.log("Topic1:", props)}
       </div>
 
       <section className="categories_wrapper">
@@ -28,4 +28,4 @@ function Login(props){
 };
 
 
-export default Login;
+export default Topic1;

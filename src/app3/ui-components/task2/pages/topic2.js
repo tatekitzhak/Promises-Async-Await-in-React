@@ -1,15 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-function Home(props) {
+
+function Topic2(props) {
+
 
   return (
     <>
       <div className="border-end bg-white">
         <div className="sidebar-heading border-bottom bg-light">
-          <h1>Home</h1>
+          <h1>Topic2</h1>
         </div>
-        {console.log("Home:", props)}
+        {console.log("Topic2:", props)}
       </div>
 
       <section className="categories_wrapper">
@@ -28,4 +30,4 @@ function Home(props) {
 };
 
 
-export default Home;
+export default Topic2;

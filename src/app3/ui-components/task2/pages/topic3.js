@@ -1,17 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-
-function About(props) {
-
+function Topic3(props) {
 
   return (
     <>
       <div className="border-end bg-white">
         <div className="sidebar-heading border-bottom bg-light">
-          <h1>About</h1>
+          <h1>Topic3</h1>
         </div>
-        {console.log("About:", props)}
+        {console.log("Topic3:", props)}
       </div>
 
       <section className="categories_wrapper">
@@ -30,4 +28,4 @@ function About(props) {
 };
 
 
-export default About;
+export default Topic3;
