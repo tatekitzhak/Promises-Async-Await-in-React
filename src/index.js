@@ -6,7 +6,7 @@ import './css/index.css';
 import $ from 'jquery';
 
 /* project */
-import "./js/components/container";
+//import "./js/components/container";
 
 /* app1 */
 //import './ui-components-1/app1';
@@ -14,7 +14,8 @@ import "./js/components/container";
 /* App2 */
 //import './ui-components-2/app2'
 
-
+/* App3 */
+import './app3/app3';
 
 
 /************************************ react js user interface folder structure

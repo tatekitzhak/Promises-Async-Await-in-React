@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import SideBar from './sideBar';
+/* import SideBar from './sideBar'; */
 
 import Home from './pages/home';
 import About from './pages/about';

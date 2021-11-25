@@ -2,22 +2,22 @@ import React from 'react';
 import { useHistory, useParams } from 'react-router-dom'
 
 
-function Topics({ match }) {
-
+function Topics(props) {
+  const path = props.match.url
   const fetchData = () => {
-    switch (match.params.link) {
+    switch (path) {
       case 'Topics-1':
-        return (`${match.params.link}`);
+        return (`${path}`);
       case 'Topics-2':
-        return (`${match.params.link}`);
+        return (`${path}`);
       case 'Topics-3':
-        return (`${match.params.link}`);
+        return (`${path}`);
       case 'Topics-4':
-        return (`${match.params.link}`);
+        return (`${path}`);
       case 'Topics-5':
-        return (`${match.params.link}`);
+        return (`${path}`);
       case 'Topics-6':
-        return (`${match.params.link}`);
+        return (`${path}`);
       default:
         return ('Default');
     }
@@ -32,7 +32,7 @@ function Topics({ match }) {
             <h1>Topics: {fetchData()}</h1>
           </div>
           <div className="list-group list-group-flush">
-            {console.log("Topics:", match)}
+            {console.log("Topics:", props)}
           </div>
         </div>
       </div>

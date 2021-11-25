@@ -10,7 +10,7 @@ import Task3 from './task-3/task3';
 import Task4 from "./task-4/task4";
 import Footer from "./footer"; 
 */
-import PageNotFound from './pages/pageNotFound';
+import PageNotFound from './pageNotFound';
 
 function App() {
   const history = useHistory()
