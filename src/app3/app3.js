@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route, Link, useHistory, useLocation, useRouteMatch } from "react-router-dom";
 
 
-import Task1 from './task-1/task1';
-import Task2 from './task-2/task2';
+import Task1 from './ui-components/task1/task1';
+import Task2 from './ui-components/task2/task2';
+/* 
 import Task3 from './task-3/task3';
 import Task4 from "./task-4/task4";
-import Footer from "./footer";
+import Footer from "./footer"; 
+*/
 import PageNotFound from './pages/pageNotFound';
 
 function App() {
@@ -51,19 +53,19 @@ function App() {
 
             <Route exact path="/task-2"
               render={(props) => <Task2 {...props} msg={'From App to Task2'} />} />
-
+            {/* 
             <Route exact path="/task-3"
               render={(props) => <Task3 {...props} msg={'From App to Task3'} />} />
 
             <Route exact path="/task-4"
               render={(props) => <Task4 {...props} msg={'From App to Task4'} />} />
-              
+               */}
             <Route
               render={(props) => <PageNotFound {...props} msg={'From App to PageNotFound'} />} />
           </Switch>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 
