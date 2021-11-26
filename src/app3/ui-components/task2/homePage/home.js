@@ -64,8 +64,9 @@ function Home(props) {
                         <p>Additional resources...</p>
                         <i class="fa fa-sun" ></i>
                         <i class="fa fa-bars"></i>
-                        <h4>See also useful data...</h4>
-                        <p>See also useful data...</p>
+                        <h4>See also useful content...</h4>
+                        <p>See also useful content...</p>
+                        <h4>Recommended content...</h4>
                     </div>
                 </section>
             </div>
