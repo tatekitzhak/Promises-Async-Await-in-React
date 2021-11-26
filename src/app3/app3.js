@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route, Link, useHistory, useLocation, useRouteMatch } from "react-router-dom";
 
-
+import Home from './ui-components/task2/homePage/home';
 import Task1 from './ui-components/task1/task1';
 import Task2 from './ui-components/task2/task2';
 /* 
@@ -34,6 +34,7 @@ function App() {
             </button>
             <div><h1>Header NavBar</h1></div>
             <div id="navbarSupportedContent" className="collapse navbar-collapse">
+              <Link to="/" className="nav-link text-uppercase"> Home</Link>
               <Link to="/task-1" className="nav-link text-uppercase"> Task 1</Link>
               <Link to="/task-2" className="nav-link text-uppercase">Task 2</Link>
               <Link to="/task-3" className="nav-link text-uppercase">Task 3</Link>
@@ -48,6 +49,8 @@ function App() {
         <div className="content border ">
 
           <Switch>
+            <Route exact path="/"
+              render={(props) => <Home {...props} msg={'From App to Home'} />} />
             <Route exact path="/task-1"
               render={(props) => <Task1 {...props} msg={'From App to Task1'} />} />
 
