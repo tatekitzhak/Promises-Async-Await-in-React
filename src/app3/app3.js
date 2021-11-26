@@ -5,10 +5,11 @@ import { BrowserRouter, Switch, Route, Link, useHistory, useLocation, useRouteMa
 import Home from './ui-components/task2/homePage/home';
 import Task1 from './ui-components/task1/task1';
 import Task2 from './ui-components/task2/task2';
+import Footer from "./ui-components/footer/footer";
 /* 
 import Task3 from './task-3/task3';
 import Task4 from "./task-4/task4";
-import Footer from "./footer"; 
+ 
 */
 import PageNotFound from './pageNotFound';
 
@@ -68,7 +69,7 @@ function App() {
           </Switch>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 
