@@ -34,11 +34,32 @@ function Element(props) {
                     <div class="surveyContainer" id="survey-anchor">
                         <div ><span >Was this article useful?</span>
                             <div>
-                                <button type="button" >Yes</button>
-                                <button type="button" >Not really</button>
+                                <button className="btn btn-primary text-white" type="button" >Yes</button>
+                                <button className="btn border-dark text-black" type="button" >Not really</button>
                             </div>
                         </div>
+                        <div>
+                            <span >Glad we could help!</span>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <label>Can you tell us more about your experience today?</label>
+                                    <textarea class="form-control" name="comment" placeholder="Message" rows="6">
+                                    </textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 pding-btm">
+                                    <label>Leave your email address if you would like us to get back to you on your feedback.</label>
+                                    <input class="form-control" type="text" name="email" placeholder="Email (optional)" />
+
+                                </div>
+                                <div>
+                                    <button className="btn btn-primary text-white" type="button" >Submit</button>
+                                    <button className="btn border-dark text-black" type="button" >Skip</button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </section>
             </div>
         </>
