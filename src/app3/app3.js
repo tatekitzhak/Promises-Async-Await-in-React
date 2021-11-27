@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route, Link, useHistory, useLocation, useRouteMatch } from "react-router-dom";
 
-import Home from './ui-components/task2/homePage/home';
+import Home from './ui-components/homePage/home';
 import Task1 from './ui-components/task1/task1';
 import Task2 from './ui-components/task2/task2';
 import Footer from "./ui-components/footer/footer";
