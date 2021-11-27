@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route, Link, useHistory, useLocation, useRouteMa
 import Home from './ui-components/homePage/home';
 import Task1 from './ui-components/task1/task1';
 import Task2 from './ui-components/task2/task2';
+import Item from './ui-components/items-results/item';
 import Footer from "./ui-components/footer/footer";
 /* 
 import Task3 from './task-3/task3';
@@ -38,7 +39,7 @@ function App() {
               <Link to="/" className="nav-link text-uppercase"> Home</Link>
               <Link to="/task-1" className="nav-link text-uppercase"> Task 1</Link>
               <Link to="/task-2" className="nav-link text-uppercase">Task 2</Link>
-              <Link to="/task-3" className="nav-link text-uppercase">Task 3</Link>
+              <Link to="/item" className="nav-link text-uppercase">Item</Link>
               <Link to="/task-4" className="nav-link text-uppercase" >Task 4</Link>
             </div>
           </div>
@@ -57,13 +58,13 @@ function App() {
 
             <Route exact path="/task-2"
               render={(props) => <Task2 {...props} msg={'From App to Task2'} />} />
-            {/* 
-            <Route exact path="/task-3"
-              render={(props) => <Task3 {...props} msg={'From App to Task3'} />} />
-
+             
+            <Route exact path="/item"
+              render={(props) => <Item {...props} msg={'From App to Item'} />} />
+            {/*
             <Route exact path="/task-4"
               render={(props) => <Task4 {...props} msg={'From App to Task4'} />} />
-               */}
+            */}
             <Route
               render={(props) => <PageNotFound {...props} msg={'From App to PageNotFound'} />} />
           </Switch>

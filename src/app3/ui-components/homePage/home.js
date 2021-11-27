@@ -13,7 +13,7 @@ function Home(props) {
             <div>
                 <section className="convert_service_plan">
                     <h3>Our Converter Services </h3>
-                    <p className="section-lead">File converter service, Free online video converter,audio converter, image photo, pictures, converter, PDF Conversion.</p>
+                    <p className="section-lead">File converter service- Free online Audio or Video converter,And images, photos, pictures,PDF documents and anything created by a camera or scanner as documents.</p>
                     <div className="services-grid">
                         <div className="service service1">
                             <i className="ti-bar-chart"></i>
