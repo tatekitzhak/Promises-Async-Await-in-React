@@ -161,19 +161,28 @@ h3 {
   align-self: flex-end;
 }
 
-@media all and (max-width:900px) {
-  .services-grid {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-}
+
 
 /* ---------------------------------------------------
    How does it work?
 -----------------------------------------------------*/
+
+/* ---------------------------------------------------
+   SITE MAP
+-----------------------------------------------------*/  
+  .topics_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+  }
+.topics_content > .topic {
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    height: 4rem;
+  }
+
 
 /* ---------------------------------------------------
    FOOTER
@@ -297,77 +306,103 @@ footer {
   display: inline;
   font-style: normal
 }
-@media only screen and (max-width: 768px) {
-  .footer-list-header {
-    font-size: 2em
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media all and (max-width:900px) {
+    .services-grid {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
   }
-  .footer-list-anchor {
-    font-size: 1.1em
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+    .topics_content { grid-template-columns: repeat(2, 1fr); }
   }
-  .footer-social-connect {
-    font-size: 2.5em
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .topics_content { grid-template-columns: repeat(3, 1fr); }
   }
-  .footer-social-overlap > a {
-    font-size: 2.24em
+/****
+Footer
+*/
+  @media only screen and (max-width: 768px) {
+    .footer-list-header {
+      font-size: 2em
+    }
+    .footer-list-anchor {
+      font-size: 1.1em
+    }
+    .footer-social-connect {
+      font-size: 2.5em
+    }
+    .footer-social-overlap > a {
+      font-size: 2.24em
+    }
+    .footer-bottom-wrapper {
+      font-size: 1.3em
+    }
   }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
+  @media only screen and (max-width: 568px) {
+    main {
+      font-size: 5em
+    }
+    .footer-list-top {
+      width: 100%
+    }
+    .footer-list-header {
+      font-size: 3em;
+    }
+    .footer-list-anchor {
+      font-size: 1.5em
+    }
+    .footer-social-section {
+      justify-content: center
+    }
+    .footer-social-section::after {
+      top: 25%
+    }
+    .footer-social-connect {
+      margin-bottom: 10px;
+      padding: 0 10px
+    }
+    .footer-social-overlap {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-social-icons-wrapper {
+      width: 100%;
+      padding: 0
+    }
+    .footer-social-overlap > a:not(:first-child) {
+      margin-left: 20px;
+    }
+    .footer-bottom-section {
+      padding: 0 5px 10px 5px
+    }
+    .footer-bottom-wrapper {
+      text-align: center;
+      width: 100%;
+      margin-top: 10px
+    }
   }
-}
-@media only screen and (max-width: 568px) {
-  main {
-    font-size: 5em
+  @media only screen and (max-width: 480px) {
+    .footer-social-overlap > a {
+      margin: auto
+    }
+    .footer-social-overlap > a:not(:first-child) {
+      margin-left: 0;
+    }
+    .footer-bottom-rights {
+      display: block
+    }
   }
-  .footer-list-top {
-    width: 100%
-  }
-  .footer-list-header {
-    font-size: 3em;
-  }
-  .footer-list-anchor {
-    font-size: 1.5em
-  }
-  .footer-social-section {
-    justify-content: center
-  }
-  .footer-social-section::after {
-    top: 25%
-  }
-  .footer-social-connect {
-    margin-bottom: 10px;
-    padding: 0 10px
-  }
-  .footer-social-overlap {
-    display: flex;
-    justify-content: center;
-  }
-  .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 20px;
-  }
-  .footer-bottom-section {
-    padding: 0 5px 10px 5px
-  }
-  .footer-bottom-wrapper {
-    text-align: center;
-    width: 100%;
-    margin-top: 10px
-  }
-}
-@media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
-    margin: auto
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 0;
-  }
-  .footer-bottom-rights {
-    display: block
-  }
-}
+
 @media only screen and (max-width: 320px) {
   .footer-list-header {
     font-size: 2.2em
