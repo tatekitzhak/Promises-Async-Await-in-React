@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function Item(props) {
+function Items(props) {
 
     useEffect(() => {
 
@@ -44,4 +44,4 @@ function Item(props) {
 };
 
 
-export default Item;
+export default Items;

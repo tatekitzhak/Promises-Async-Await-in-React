@@ -5,10 +5,11 @@ import { BrowserRouter, Switch, Route, Link, useHistory, useLocation, useRouteMa
 import Home from './ui-components/homePage/home';
 import Task1 from './ui-components/task1/task1';
 import Task2 from './ui-components/task2/task2';
-import Item from './ui-components/items-results/item';
+import Items from './ui-components/items-results/items';
+import Element from './ui-components/items-results/element';
 import Footer from "./ui-components/footer/footer";
 /* 
-import Task3 from './task-3/task3';
+
 import Task4 from "./task-4/task4";
  
 */
@@ -39,8 +40,8 @@ function App() {
               <Link to="/" className="nav-link text-uppercase"> Home</Link>
               <Link to="/task-1" className="nav-link text-uppercase"> Task 1</Link>
               <Link to="/task-2" className="nav-link text-uppercase">Task 2</Link>
-              <Link to="/item" className="nav-link text-uppercase">Item</Link>
-              <Link to="/task-4" className="nav-link text-uppercase" >Task 4</Link>
+              <Link to="/items" className="nav-link text-uppercase">Items</Link>
+              <Link to="/element" className="nav-link text-uppercase" >Element</Link>
             </div>
           </div>
         </nav>
@@ -59,12 +60,12 @@ function App() {
             <Route exact path="/task-2"
               render={(props) => <Task2 {...props} msg={'From App to Task2'} />} />
              
-            <Route exact path="/item"
-              render={(props) => <Item {...props} msg={'From App to Item'} />} />
-            {/*
-            <Route exact path="/task-4"
-              render={(props) => <Task4 {...props} msg={'From App to Task4'} />} />
-            */}
+            <Route exact path="/items"
+              render={(props) => <Items {...props} msg={'From App to Items'} />} />
+            
+            <Route exact path="/element"
+              render={(props) => <Element {...props} msg={'From App to Element'} />} />
+           
             <Route
               render={(props) => <PageNotFound {...props} msg={'From App to PageNotFound'} />} />
           </Switch>
