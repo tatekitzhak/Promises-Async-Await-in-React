@@ -2,26 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Element(props) {
+    const {isHidden, setIsHidden} = useState(0);
+
+    // function handleSubmit(v) {
+    //     e.preventDefault();
+    //     console.log('You clicked submit.');
+    //     setIsHidden(v)
+    //   }
 
     useEffect(() => {
-
+        //setIsHidden(true)
+        document.title = `You clicked ${isHidden} times`;
     }, []);
 
 
     return (
         <>
-            <div>
+            <div>{console.log('You clicked submit.', isHidden)}
                 <section>
-                    <div class="link-nodes-path">
-                        <ul class="links breadcrumb">
-                            <li class="link-node"><a href="#" >Path: </a></li>
-                            <li class="link-node"><a href="#">A/</a></li>
-                            <li class="link-node"><a href="#">B/</a></li>
-                            <li class="link-node"><a href="#">C/</a></li>
-                            <li class="link-node"><a href="#">D/</a></li>
-                            <li class="link-node"><a href="#">E</a></li>
+                    <nav className="link-nodes-path">
+                        <ul className="links breadcrumb">
+                            <li className="link-node"><a href="#"> Item-1 /</a></li>
+                            <li className="link-node"><a href="#"> Item-2 /</a></li>
+                            <li className="link-node"><a href="#"> Item-3 /</a></li>
+                            <li className="link-node"><a href="#"> Item-4 /</a></li>
+                            <li className="link-node active"><a href="#"> Item-5 </a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </section>
                 <section>
                     <div className="services-grid">
@@ -31,24 +38,28 @@ function Element(props) {
 
                         </div>
                     </div>
-                    <div class="surveyContainer" id="survey-anchor">
-                        <div ><span >Was this article useful?</span>
+                    <div className="surveyContainer" id="survey-anchor">
+                        <div >
+                            <span >Was this article useful?</span>
                             <div>
-                                <button className="btn btn-primary text-white" type="button" >Yes</button>
-                                <button className="btn border-dark text-black" type="button" >Not really</button>
+                                
+                                <form >
+                                    <button onClick={() => setIsHidden(isHidden + 1)} className="btn btn-primary text-white" type="button" >Yes</button>
+                                    <button className="btn border-dark text-black" type="button" >Not really</button>
+                                </form>
                             </div>
                         </div>
-                        <div>
+                        <div style={{ display: isHidden ? 'none' : null }} >
                             <span >Glad we could help!</span>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div className="row">
+                                <div className="col-lg-12 col-md-12 col-sm-12">
                                     <label>Can you tell us more about your experience today?</label>
-                                    <textarea class="form-control" name="comment" placeholder="Message" rows="6">
+                                    <textarea className="form-control" name="comment" placeholder="Message" rows="6">
                                     </textarea>
                                 </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 pding-btm">
+                                <div className="col-lg-12 col-md-12 col-sm-12 pding-btm">
                                     <label>Leave your email address if you would like us to get back to you on your feedback.</label>
-                                    <input class="form-control" type="text" name="email" placeholder="Email (optional)" />
+                                    <input className="form-control" type="text" name="email" placeholder="Email (optional)" />
 
                                 </div>
                                 <div>
