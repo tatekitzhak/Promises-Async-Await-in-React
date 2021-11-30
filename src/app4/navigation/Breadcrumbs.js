@@ -17,7 +17,6 @@ function Breadcrumbs({ route }) {
                 )
               }
               { (index === breadcrumbs.length - 1) && crumb.label }
-              {console.log('Breadcrumbs:')}
             </div>
           ))
         }
