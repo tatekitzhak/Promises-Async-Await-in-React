@@ -7,20 +7,22 @@ function Menu({ routes, level }) {
   const [data, setData] = useState();
 
   useEffect(() => {
+    const ele_id_1 = document.querySelector('#menu-id-1');
+
     if (level == 1) {
-      setData(level);
+      setData(ele_id_1);
     }
 
   }, [level, setData]);
   return (
     <>
-      <nav className={`menu menu-level-${level} `}>
+      <nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
         {console.log('Menu:', data)}
         <ul>
           {
             routes.map((route, index) => (
-              <li>
-                <NavLink key={index} to={route.path}>
+              <li key={index}>
+                <NavLink key={index} to={route.path} className={`${route.className}`}>
                   {route.label}
                 </NavLink>
               </li>

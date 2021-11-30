@@ -67,6 +67,7 @@ export const routes = [
           {
             path: "/topic1",
             label: "Topic1",
+            className: "drawer-menu-item",
             component: Topic1,
             routes: [
               {
