@@ -16,8 +16,9 @@ import $ from 'jquery';
 //import './ui-components-2/app2'
 
 /* App3 */
-import './app3/app3';
+//import './app3/app3';
 
+import "./app4/index";
 
 /************************************ react js user interface folder structure
  * 
