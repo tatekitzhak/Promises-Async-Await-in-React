@@ -13,8 +13,7 @@ function Menu(props) {
   }, []);
   return (
     <>
-      <div className={`${props.drawer}`}>
-        {props.children}
+        
         <nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
           <ul>
             {
@@ -22,14 +21,12 @@ function Menu(props) {
                 <li key={index}>
                   <NavLink key={index} to={route.path} className={`${route.className}`}>
                     {route.label}
-                    {props.children}
                   </NavLink>
                 </li>
               ))
             }
           </ul>
         </nav>
-      </div>
 
     </>
   );
@@ -62,14 +59,18 @@ function NestedMenu({ route }, props) {
           pathTo(route)
             .filter(r => r.routes)
             .map(function (r, index) {
-              if (index == 1) {
+              if (index == 1 && r.id == "task1-task1") {
                 return (
-                  <Menu key={index} routes={r.routes} level={index} drawer={'drawer'} {...props}>
-                    <button type="button" className="drawer-toggle drawer-hamburger">
-                      <span className="sr-only">toggle navigation</span>
-                      <span className="drawer-hamburger-icon"></span>
-                    </button>
-                  </Menu>)
+                  <div key={index} className="drawer">
+                      <button type="button" className="drawer-toggle drawer-hamburger">
+                          <span className="sr-only">toggle navigation</span>
+                          <span className="drawer-hamburger-icon"></span>
+                        </button>
+                      <Menu key={index} routes={r.routes} level={index} {...props}>
+                        {console.log('r:',r.id)}
+                      </Menu>
+                  </div>
+                  )
               }
               return (
 
