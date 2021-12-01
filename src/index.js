@@ -8,16 +8,16 @@ import "./css/app4.css"
 import $ from 'jquery';
 
 /* project */
-//import "./js/components/container";
+import "./js/components/container";
 
 /* app1 */
-//import './ui-components-1/app1';
+//import "./app1/app1";
 
 /* App2 */
-//import './ui-components-2/app2'
+//import "./app2/app2";
 
 /* App3 */
-import './app3/app3';
+//import './app3/app3';
 
 /* App4 */
 //import "./app4/index";

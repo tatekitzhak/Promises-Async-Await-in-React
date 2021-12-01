@@ -25,7 +25,7 @@ const AddPlayer = () =>{
   }
   return(
     <>
-      <div>{console.log("target:", name, number, id)}
+      <div>
         <form className="form-inline" onSubmit={addPlayer}>
           <div className="form-group mx-sm-3 mb-2">
             <input type="text"  className="form-control" value={name} placeholder="name" onChange={updateName}/>

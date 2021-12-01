@@ -44,7 +44,6 @@ const CountContextB = React.createContext("countB");
 const DescendantA = () => {
 const { count, setCount} = useContext(CountContextA);
 
-    console.log("DescendantA:");
 
   return (
     <>
@@ -56,15 +55,12 @@ const { count, setCount} = useContext(CountContextA);
 const DescendantB = () => {
 const {count2, setCount2} = useContext(CountContextB);
 
-  console.log("DescendantB:", count2);
 
   useEffect(() => {
-    console.log('useEffect', count2)
   }, [])
 
   function incrementCount() {
     setCount2((count2) => count2 + 1);
-    console.log('incrementCount', count2);
 
   }
 
@@ -80,14 +76,6 @@ const {count2, setCount2} = useContext(CountContextB);
 export default function MainTask3({authorized}) {
   const [count, setCount] = useState([10,30,50,70,90]);
   const [count2, setCount2] = useState(20);
-
-  console.log("Sitemap:",!authorized);
-
-  // if(!authorized){
-  //   return <Redirect to="/side-bar"/>;
-  //   console.log("Sitemap:",!authorized);
-  //
-  // }
 
 
   return (

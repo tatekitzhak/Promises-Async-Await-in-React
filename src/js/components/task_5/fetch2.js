@@ -40,8 +40,7 @@ function Fetch2() {
     }
 
     fetchDataAndCategories('https://jsonplaceholder.typicode.com/posts/1','https://jsonplaceholder.typicode.com/posts/2').then(function ([data, categories]) {
-      console.log("data:",data)
-      console.log("categories:", categories)
+      
     }).catch(error=>{
       console.log("error fetchDataAndCategories:", error)
     })

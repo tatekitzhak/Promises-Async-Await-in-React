@@ -26,7 +26,6 @@ function MainTask2(props) {
           </section>
             
           <section className="main_task_2_container">
-            {console.log('MainTask2:', props)}
             <Switch>
             
               {

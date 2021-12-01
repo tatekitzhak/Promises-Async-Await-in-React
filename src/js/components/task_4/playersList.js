@@ -20,7 +20,6 @@ const PlayersList = () => {
   return(
         <>
           <div>
-          <h3>{console.log("useEffect:" ,palyers)}</h3>
             <ul>
           {
             palyers.map((player, index)=>(

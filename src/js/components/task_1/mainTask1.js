@@ -16,7 +16,6 @@ function MainTask1(props) {
   return(
     <Router>
       <div className="row">
-        {console.log("MainTask1:",props)}
         <div className="col-md-3 pull-md-right">
           <SideNavBarProvider>
             <NavigationBar {...props}/>
@@ -25,7 +24,6 @@ function MainTask1(props) {
 
         <div className="col-md-8 pull-md-right border">
           <Switch>
-              {console.log("MainTask1 Switch:",props)}
                 <Route exact path={`${props.match.path}`}
                              render={(props) => <Content {...props} title={`Props through render (PropsPage)`}  name={'Ran'}/>} />
 

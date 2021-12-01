@@ -41,7 +41,6 @@ function NavigationBar(props){
               </div>
               <div className="list-group list-group-flush">
                 {
-                    console.log("NavigationBar6:", props)
                   /* topics.map((value, index)=>{
                       return (
                           <Link className="list-group-item list-group-item-action list-group-item-light p-3"

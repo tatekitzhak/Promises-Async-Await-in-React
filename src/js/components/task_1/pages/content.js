@@ -8,7 +8,6 @@ function Content(props) {
   return(
     <>
       <div>
-        {console.log("Content:", props)}
         <h3>Content: </h3>
         
       </div>

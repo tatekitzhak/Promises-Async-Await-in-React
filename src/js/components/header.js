@@ -28,7 +28,6 @@ function Header(props) {
                                               pathname:`${path}`
                                               }}>
                                     {title}
-                                    {console.log('Header:',path)}
                                     {/* <span class="sr-only">(current)</span> */}
                                   </Link>
                                 </li>
