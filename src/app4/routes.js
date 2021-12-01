@@ -12,6 +12,7 @@ import Careers from "./pages/About/Careers";
 
 import Basic from "./pages/Pricing/Basic";
 import Corporate from "./pages/Pricing/Corporate";
+import Footer from "./pages/footer";
 
 
 export const routes = [
@@ -40,7 +41,14 @@ export const routes = [
       {
         path: "/users",
         label: "Users",
-        component: Users
+        component: Users,
+        routes:[
+          {
+            path: "/",
+            label: "FooterUsers",
+            component: Footer
+          }
+        ]
       },
       {
         path: "/pricing",
@@ -89,7 +97,43 @@ export const routes = [
             component: Topic2
           }
         ]
+      },
+      {
+        path: "/",
+        label: "Footer",
+        id: "footer",
+        component: Footer,
+        routes: [
+          {
+            path: "/topic1",
+            label: "Topic1",
+            className: "drawer-menu-item",
+            component: Topic1,
+            routes: [
+              {
+                path: "/subtopic",
+                label: "Subtopic",
+                component: Subtopic
+              },
+              {
+                path: "/subtopic2",
+                label: "Subtopic2",
+                component: Topic2
+              }
+            ]
+          },
+          {
+            path: "/topic2",
+            label: "Topic2",
+            component: Topic2
+          }
+        ]
       }
     ]
+  },
+  {
+    path: "/foo",
+    label: "Footer",
+    component: Footer,
   }
 ];

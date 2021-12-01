@@ -6,9 +6,16 @@ const Page = ({ route }) => {
   const PageBody = route.component;
   return (
     <>
-      <NestedMenu route={route} />
-      {route.parent && <Breadcrumbs route={route} />}
-      <PageBody />
+      <NestedMenu route={route}>
+
+      </NestedMenu>
+
+      {route.parent && (<Breadcrumbs route={route}> </Breadcrumbs>)}
+      {console.log('Page:',route)}
+      
+      <PageBody>
+
+      </PageBody>
     </>
   );
 };

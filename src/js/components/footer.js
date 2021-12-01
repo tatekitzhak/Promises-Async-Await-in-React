@@ -23,30 +23,7 @@ class Footer extends Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="col-md-2 pull-md-right">
-                                <div className="footer-widget">
-                                    <div className="footer-menu footer-menu--1">
-                                        <h4 className="footer-widget-title">CATEGORY</h4>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Wordpress</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Plugins</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Joomla Template</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Admin Template</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">HTML Template</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> */}
+                           
                             <div className="col-md-2 pull-md-right">
                                 <div className="footer-widget">
                                     <div className="footer-menu">
@@ -68,30 +45,7 @@ class Footer extends Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="col-md-2 pull-md-right">
-                                <div className="footer-widget">
-                                    <div className="footer-menu no-padding">
-                                        <h4 className="footer-widget-title">Help Support</h4>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Support Forum</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Terms &amp; Conditions</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Support Policy</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Refund Policy</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">FAQs</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> */}
+                            
                             <div className="col-md-2 pull-md-right">
                                 <div className="footer-widget">
                                     <div className="footer-menu no-padding">
@@ -117,10 +71,6 @@ class Footer extends Component {
                             <div className="copyright-text">
                                 <p>© 2021 All rights reserved. </p>
                             </div>
-
-                            {/* <div className="go_top">
-                                <span className="icon-arrow-up"></span>
-                            </div> */}
                         </div>
                         </div>
                     </div>
