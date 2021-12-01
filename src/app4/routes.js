@@ -26,6 +26,7 @@ export const routes = [
         label: "About",
         component: About,
         routes: [
+          
           {
             path: "/our-team",
             label: "Our Team",
@@ -100,7 +101,7 @@ export const routes = [
       },
       {
         path: "/",
-        label: "Footer",
+        label: "Footer1",
         id: "footer",
         component: Footer,
         routes: [
@@ -132,7 +133,7 @@ export const routes = [
     ]
   },
   {
-    path: "/foo",
+    path: "/foo1",
     label: "Footer",
     component: Footer,
   }

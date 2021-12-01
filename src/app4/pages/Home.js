@@ -6,6 +6,7 @@ const Home = () => (
       src="https://via.placeholder.com/640x480?text=Home"
       alt="Home"
     />
+    <h1>Home</h1>
   </div>
 );
 

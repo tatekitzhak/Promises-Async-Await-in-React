@@ -1,7 +1,7 @@
 import React from "react";
 
 const Careers = () => (
-  <div>
+  <div className="careers">
     <img src="https://via.placeholder.com/640x480?text=Careers" alt="Careers" />
   </div>
 );
