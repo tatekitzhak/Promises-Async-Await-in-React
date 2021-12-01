@@ -33,32 +33,21 @@ function Menu(props) {
 }
 
 function NestedMenu({ route }, props) {
-  let menusWrapperElement = useRef(null);
 
   const [parentElement, setParentElement] = useState("");
-
   const [childrenElement, setChildrenElement] = useState("");
-  console.log('NestedMenu:', menusWrapperElement.current)
 
   useEffect(() => {
-    // const navWrapperDiv = document.createElement("div");
-    // const newContent = document.createTextNode("Hi there and greetings!");
-    // menusWrapperElement.current.appendChild(newContent);
+    
 
-    //drawerDiv.classList.add("drawer--left");
-    console.log('useEffect:', menusWrapperElement.current)
-
-    setParentElement(menusWrapperElement.current);
-    setChildrenElement(menusWrapperElement.current.children);
-
-  }, [route]);
+  }, []);
   return (
     <>
-      <div id="menus-wrapper" ref={menusWrapperElement} >
+      <div id="menus-wrapper" >
         {
           pathTo(route)
             .filter(r => r.routes)
-            .map(function (r, index) {
+            .map(function (r, index){
               if (index == 1 && r.id == "task1-task1") {
                 return (
                   <div key={index} className="drawer">
@@ -76,7 +65,6 @@ function NestedMenu({ route }, props) {
 
                 <Menu key={index} routes={r.routes} level={index} {...props}>
 
-                  {/* {console.log('Menu children:', childrenElement)} */}
                   <h1>From menus-wrapper</h1>
                 </Menu>
               )
