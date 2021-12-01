@@ -3,72 +3,57 @@ import { NavLink } from "react-router-dom";
 import { pathTo } from "./utils";
 
 
-function Menu({ routes, level }) {
+function Menu(props) {
+  const level = props.level;
+  const routes = props.routes;
   const [data, setData] = useState();
 
-  // create a new div element
-  const newDiv = document.createElement("div");
-
-  // and give it some content
-  const newContent = document.createTextNode("Hi there and greetings!");
-
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);
-
-
   useEffect(() => {
-  /*   const ele_id_1 = document.querySelector('#menu-id-1');
 
-    const drawerDiv = document.createElement("div");
-    drawerDiv.classList.add("drawer--left");
-
-
-
-    if (level == 1) {
-      setData(ele_id_1);
-      //  drawerDiv.appendChild(ele_id_1);
-      { console.log('Menu::', drawerDiv) }
-
-    }
- */
-  }, [level, setData]);
+  }, []);
   return (
     <>
-      <nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
-        <ul>
-          {
-            routes.map((route, index) => (
-              <li key={index}>
-                <NavLink key={index} to={route.path} className={`${route.className}`}>
-                  {route.label}
-                </NavLink>
-              </li>
-            ))
-          }
-        </ul>
+      <div className={`${props.drawer}`}>
+        {props.children}
+        <nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
+          <ul>
+            {
+              routes.map((route, index) => (
+                <li key={index}>
+                  <NavLink key={index} to={route.path} className={`${route.className}`}>
+                    {route.label}
+                    {props.children}
+                  </NavLink>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
 
-      </nav>
     </>
   );
 }
 
-function NestedMenu({ route }) {
+function NestedMenu({ route }, props) {
   let menusWrapperElement = useRef(null);
-  console.log('NestedMenu:', menusWrapperElement.current)
 
   const [parentElement, setParentElement] = useState("");
-  
+
   const [childrenElement, setChildrenElement] = useState("");
+  console.log('NestedMenu:', menusWrapperElement.current)
 
   useEffect(() => {
+    // const navWrapperDiv = document.createElement("div");
+    // const newContent = document.createTextNode("Hi there and greetings!");
+    // menusWrapperElement.current.appendChild(newContent);
 
-    const drawerDiv = document.createElement("div");
-    drawerDiv.classList.add("drawer--left");
-    console.log('useEffect:', menusWrapperElement.current.children)
-    
-    setParentElement(menusWrapperElement.current)
-    //childNodes
-    //children
+    //drawerDiv.classList.add("drawer--left");
+    console.log('useEffect:', menusWrapperElement.current)
+
+    setParentElement(menusWrapperElement.current);
+    setChildrenElement(menusWrapperElement.current.children);
+
   }, [route]);
   return (
     <>
@@ -76,11 +61,25 @@ function NestedMenu({ route }) {
         {
           pathTo(route)
             .filter(r => r.routes)
-            .map((r, index) => (
-              <Menu key={index} routes={r.routes} level={index}>
-                {console.log('Menu component:', parentElement.children)}
-              </Menu>
-            ))
+            .map(function (r, index) {
+              if (index == 1) {
+                return (
+                  <Menu key={index} routes={r.routes} level={index} drawer={'drawer'} {...props}>
+                    <button type="button" className="drawer-toggle drawer-hamburger">
+                      <span className="sr-only">toggle navigation</span>
+                      <span className="drawer-hamburger-icon"></span>
+                    </button>
+                  </Menu>)
+              }
+              return (
+
+                <Menu key={index} routes={r.routes} level={index} {...props}>
+
+                  {/* {console.log('Menu children:', childrenElement)} */}
+                  <h1>From menus-wrapper</h1>
+                </Menu>
+              )
+            })
         }
       </div>
     </>

@@ -13,7 +13,6 @@ function App4({ routes }){
                 <Page route={route} />
               </Route>
             ))
-            //console.log('App4:',routes)
             }
           </Switch>
         </BrowserRouter>

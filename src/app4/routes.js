@@ -62,6 +62,7 @@ export const routes = [
       {
         path: "/task1",
         label: "Task1",
+        className: "drawer",
         component: Task1,
         routes: [
           {
