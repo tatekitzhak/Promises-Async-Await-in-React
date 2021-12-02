@@ -4,7 +4,7 @@ import Breadcrumbs from "./Breadcrumbs";
 
 const Page = (props) => {
  const PageBody = props.route.component;
-  const Footer = props.route
+ const Footer = props.children;
   return (
     <>
       <NestedMenu route={props.route}>
