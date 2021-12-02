@@ -33,18 +33,15 @@ function Menu(props) {
 }
 
 function NestedMenu({ route }, props) {
-  const menus_wrapper = useRef(null);
   const [menusWrapper, setMenusWrapper] = useState("");
   const [childrenElement, setChildrenElement] = useState("");
 
   useEffect(() => {
     
-    setMenusWrapper(menus_wrapper.current);
 
   }, [route]);
   return (
     <>
-      <div id="menus-wrapper" ref={menus_wrapper}>
       {console.log('NestedMenu:',menusWrapper)}
         {
           pathTo(route)
@@ -73,7 +70,6 @@ function NestedMenu({ route }, props) {
               )
             })
         }
-      </div>
     </>
   );
 }

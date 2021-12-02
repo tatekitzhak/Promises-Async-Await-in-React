@@ -1,10 +1,14 @@
-import React from "react";
+import React, {Children} from "react";
 import NestedMenu from "./NestedMenu";
 import Breadcrumbs from "./Breadcrumbs";
 
 const Page = (props) => {
  const PageBody = props.route.component;
- const Footer = props.children;
+
+ const Footer = Children.map(props.children, child => (
+   <div>{child}</div>
+ ));
+
   return (
     <>
       <NestedMenu route={props.route}>
@@ -12,14 +16,15 @@ const Page = (props) => {
       </NestedMenu>
 
       {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
-      {console.log('Page:',props)}
+      {console.log('Page:',props.children.props.route.parent.routes)}
 
       <PageBody route={props.route} page={'Page'}>
 
       </PageBody>
 
       {/* Footer */}
-      {props.children}
+      <h1>Footer children count: {Children.count(props.children)}</h1>
+      {Footer}
     </>
   );
 };

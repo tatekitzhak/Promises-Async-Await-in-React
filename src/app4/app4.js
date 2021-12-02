@@ -17,8 +17,10 @@ function App4({ routes }, props) {
             return (
               <Route key={route.path} path={route.path}>
                 <Page route={route} {...props}>
-                  <Footer route={route}/>
+                  <Footer route={route}>
 
+                  </Footer>
+                  {/* <h1>FooterFooter</h1> */}
                 </Page>
               </Route>
             )
