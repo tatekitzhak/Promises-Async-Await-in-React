@@ -1,3 +1,5 @@
+import React from "react";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Users from "./pages/Users";
@@ -101,13 +103,13 @@ export const routes = [
       },
       {
         path: "/",
-        label: "Footer1",
+        label: "Footer",
         id: "footer",
         component: Footer,
         routes: [
           {
-            path: "/topic1",
-            label: "Topic1",
+            path: "/footer1",
+            label: "Footer1",
             className: "drawer-menu-item",
             component: Topic1,
             routes: [

@@ -5,6 +5,8 @@ function Task1(props) {
         <>
         <div>
           <h1>Task1</h1>
+          {console.log('Task1:', props)}
+
         </div>
         </>
       );  

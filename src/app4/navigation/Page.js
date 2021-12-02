@@ -11,9 +11,9 @@ const Page = ({ route }) => {
       </NestedMenu>
 
       {route.parent && (<Breadcrumbs route={route}> </Breadcrumbs>)}
-      {console.log('Page:',route)}
-      
-      <PageBody>
+      {/* {console.log('Page:',route)} */}
+
+      <PageBody route={route} page={'Page'}>
 
       </PageBody>
     </>
