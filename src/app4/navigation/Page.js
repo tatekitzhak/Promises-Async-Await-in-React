@@ -2,22 +2,24 @@ import React from "react";
 import NestedMenu from "./NestedMenu";
 import Breadcrumbs from "./Breadcrumbs";
 
-const Page = ({ route }) => {
-  const PageBody = route.component;
-  const Footer = route
+const Page = (props) => {
+ const PageBody = props.route.component;
+  const Footer = props.route
   return (
     <>
-      <NestedMenu route={route}>
+      <NestedMenu route={props.route}>
 
       </NestedMenu>
 
-      {route.parent && (<Breadcrumbs route={route}> </Breadcrumbs>)}
-      {console.log('Page:',route)}
+      {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
+      {console.log('Page:',props)}
 
-      <PageBody route={route} page={'Page'}>
+      <PageBody route={props.route} page={'Page'}>
 
       </PageBody>
-      <h1>Footer</h1>
+
+      {/* Footer */}
+      {props.children}
     </>
   );
 };
