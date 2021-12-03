@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/dropdown';
@@ -5,7 +6,7 @@ import './css/index.scss';
 import './css/index.css';
 import './css/app3.css';
 import "./css/app4.css"
-import $ from 'jquery';
+
 
 /* project */
 //import "./js/components/container";
@@ -17,10 +18,10 @@ import $ from 'jquery';
 //import "./app2/app2";
 
 /* App3 */
-//import './app3/app3';
+import './app3/app3';
 
 /* App4 */
-import "./app4/index";
+//import "./app4/index";
 
 /************************************ react js user interface folder structure
  * 
