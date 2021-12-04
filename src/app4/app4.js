@@ -20,7 +20,6 @@ function App4({ routes }, props) {
                   <Footer route={route}>
 
                   </Footer>
-                  {/* <h1>FooterFooter</h1> */}
                 </Page>
               </Route>
             )
