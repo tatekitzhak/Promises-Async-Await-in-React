@@ -9,19 +9,19 @@ import "./css/app4.css"
 
 
 /* project */
-//import "./js/components/container";
+//import "./js/components/container.js";
 
 /* app1 */
-//import "./app1/app1";
+//import "./app1/app1.js";
 
 /* App2 */
-//import "./app2/app2";
+//import "./app2/app2.js";
 
 /* App3 */
-import './app3/app3';
+//import './app3/app3.js';
 
 /* App4 */
-//import "./app4/index";
+import "./app4/index.js";
 
 /************************************ react js user interface folder structure
  * 

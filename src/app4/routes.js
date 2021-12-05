@@ -73,7 +73,7 @@ export const routes = [
       {
         path: "/task1",
         label: "Task1",
-        id: "task1-task1",
+        id: "task1",
         component: Task1,
         routes: [
           {

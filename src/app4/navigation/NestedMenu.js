@@ -6,7 +6,6 @@ import { pathTo } from "./utils";
 function Menu(props) {
   const level = props.level;
   const routes = props.routes;
-  const [data, setData] = useState();
 
   useEffect(() => {
 
@@ -47,7 +46,7 @@ function NestedMenu({ route }, props) {
           pathTo(route)
             .filter(r => r.routes)
             .map(function (r, index){
-              if (index == 1 && r.id == "task1-task1") {
+              if (index == 1 && r.id == "task1") {
                 return (
                   <div key={index} className="drawer">
                       <button type="button" className="drawer-toggle drawer-hamburger">
