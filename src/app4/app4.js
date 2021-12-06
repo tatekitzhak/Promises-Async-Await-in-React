@@ -2,12 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Page from "./navigation/Page";
 
-function App4({ routes }, props) {
-
+function App4(props) {
+  const routes = props.routes;
   const Footer = routes[routes.length - 1].component;
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      {/* {console.log('App4', routes[19].component)} */}
       <Switch>
         {
           routes.map(function (route, index) {
@@ -26,11 +25,6 @@ function App4({ routes }, props) {
           })
         }
       </Switch>
-      {/* 
-      <Footer>
-
-      </Footer> 
-      */}
     </BrowserRouter>
 
   );

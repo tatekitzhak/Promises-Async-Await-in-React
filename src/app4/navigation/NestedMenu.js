@@ -3,21 +3,20 @@ import { NavLink } from "react-router-dom";
 import { pathTo } from "./utils";
 import Menu from "./menus/menu";
 
-function NestedMenu({ route }, props) {
-  const [menusWrapper, setMenusWrapper] = useState("");
-  const [childrenElement, setChildrenElement] = useState("");
-
+function NestedMenu(props) {
+  const route = props.route;
+  console.log('NestedMenu:',route)
   useEffect(() => {
     
 
   }, [route]);
   return (
     <>
-      {console.log('NestedMenu:',menusWrapper)}
         {
           pathTo(route)
-            .filter(r => r.routes)
+            .filter(r => r.linkRoutes)
             .map(function (r, index){
+              {console.log('r:',r)}
               if (index == 1 && r.id == "task1") {
                 return (
                   <div key={index} className="drawer">
@@ -25,8 +24,8 @@ function NestedMenu({ route }, props) {
                           <span className="sr-only">toggle navigation</span>
                           <span className="drawer-hamburger-icon"></span>
                         </button>
-                      <Menu key={index} routes={r.routes} level={index} {...props}>
-                        {console.log('r:',r.id)}
+                      <Menu key={index} linkRoutes={r.linkRoutes} level={index} {...props}>
+                        
                         
                       </Menu>
                   </div>
@@ -34,7 +33,7 @@ function NestedMenu({ route }, props) {
               }
               return (
 
-                <Menu key={index} routes={r.routes} level={index} {...props}>
+                <Menu key={index} linkRoutes={r.linkRoutes} level={index} {...props}>
 
                   <h1>From menus-wrapper</h1>
                 </Menu>

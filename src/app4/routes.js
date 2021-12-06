@@ -22,13 +22,24 @@ export const routes = [
     path: "/",
     label: "Home",
     component: Home,
+    linkRoutes: [
+      {
+        path: "/convert-audio",
+        label: "Audio File",
+        component: Team
+      },
+      {
+        path: "/convert-image",
+        label: "Image File",
+        component: Careers
+      }
+    ],
     routes: [
       {
         path: "/about",
         label: "About",
         component: About,
         routes: [
-          
           {
             path: "/our-team",
             label: "Our Team",
@@ -100,43 +111,7 @@ export const routes = [
             component: Topic2
           }
         ]
-      },
-      {
-        path: "/",
-        label: "Footer",
-        id: "footer",
-        component: Footer,
-        routes: [
-          {
-            path: "/footer1",
-            label: "Footer1",
-            className: "drawer-menu-item",
-            component: Topic1,
-            routes: [
-              {
-                path: "/subtopic",
-                label: "Subtopic",
-                component: Subtopic
-              },
-              {
-                path: "/subtopic2",
-                label: "Subtopic2",
-                component: Topic2
-              }
-            ]
-          },
-          {
-            path: "/topic2",
-            label: "Topic2",
-            component: Topic2
-          }
-        ]
       }
     ]
-  },
-  {
-    path: "/foo1",
-    label: "Footer",
-    component: Footer,
   }
 ];
