@@ -59,37 +59,66 @@ function NestedMenu(props) {
   console.log('NestedMenu2:',typeId)
   return (
     <>
-        {
-          /* pathTo(route)
-            .filter(rt => rt.routesHomeContent)
-            .map(function (rt, index){
-              // {console.log('rt NestedMenu:',rt)}
-              if (index == 1 && rt.id == "task1") {
-                return (
-                  <div key={index} className="drawer">
-                      <button type="button" className="drawer-toggle drawer-hamburger">
-                          <span className="sr-only">toggle navigation</span>
-                          <span className="drawer-hamburger-icon"></span>
-                        </button>
-                      <Menu key={index} routesHomeContent={rt.routesHomeContent} level={index} {...props}>
-                        
-                        
-                      </Menu>
-                  </div>
-                  )
-              }
-              return (
-
-                <Menu key={index} routesHomeContent={rt.routesHomeContent} level={index} {...props}>
-
-                  <h1>From menus-wrapper</h1>
-                </Menu>
+      {
+        (typeId == 'pageId') ? (pathTo(route)
+        .filter(rt => rt.routes)
+        .map(function (rt, index){
+          {console.log('rt:',rt)}
+          if (index == 1 && rt.id == "task1") {
+            return (
+              <div key={index} className="drawer">
+                  <button type="button" className="drawer-toggle drawer-hamburger">
+                      <span className="sr-only">toggle navigation</span>
+                      <span className="drawer-hamburger-icon"></span>
+                    </button>
+                  <Menu key={index} routes={rt.routes} level={index} {...props}>
+                    
+                    
+                  </Menu>
+              </div>
               )
-            }) */
+          }
+          return (
+
+            <Menu key={index} routes={rt.routes} level={index} {...props}>
+
+              <h1>From menus-wrapper</h1>
+            </Menu>
+          )
+        })) :
+        (typeId == 'homeId') ? (pathTo(route)
+        .filter(rt => rt.routesHomeContent)
+        .map(function (rt, index){
+          // {console.log('rt NestedMenu:',rt)}
+          if (index == 1 && rt.id == "task1") {
+            return (
+              <div key={index} className="drawer">
+                  <button type="button" className="drawer-toggle drawer-hamburger">
+                      <span className="sr-only">toggle navigation</span>
+                      <span className="drawer-hamburger-icon"></span>
+                    </button>
+                  <Menu key={index} routesHomeContent={rt.routesHomeContent} level={index} {...props}>
+                    
+                    
+                  </Menu>
+              </div>
+              )
+          }
+          return (
+
+            <Menu key={index} routesHomeContent={rt.routesHomeContent} level={index} {...props}>
+
+              <h1>From menus-wrapper</h1>
+            </Menu>
+          )
+        })  ) : <h1>NestedMenu null </h1>
+      }
+        {
+          /* */
         }
 
         {
-          pathTo(route)
+          /* pathTo(route)
           .filter(rt => rt.routes)
           .map(function (rt, index){
             {console.log('rt:',rt)}
@@ -114,7 +143,7 @@ function NestedMenu(props) {
                 <h1>From menus-wrapper</h1>
               </Menu>
             )
-          })
+          }) */
       }
 
     </>

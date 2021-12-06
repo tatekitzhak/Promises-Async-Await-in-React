@@ -11,9 +11,9 @@ function Page(props){
 
   return (
     <>
-      {/* <NestedMenu route={props.route} id={'pageId'}>
+      <NestedMenu route={props.route} id={'pageId'}>
 
-      </NestedMenu> */}
+      </NestedMenu>
 
       {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
 
