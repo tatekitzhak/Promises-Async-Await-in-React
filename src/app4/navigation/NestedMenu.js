@@ -56,7 +56,7 @@ function NestedMenu(props) {
 
 
   
-  console.log('NestedMenu2:',typeId)
+  console.log('NestedMenu:',typeId)
   return (
     <>
       {

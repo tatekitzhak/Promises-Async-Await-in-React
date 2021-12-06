@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
+import { useHistory, useLocation, useParams, useRouteMatch } from "react-router-dom";
 import NestedMenu from "../navigation/NestedMenu";
 
 function Home(props) {
   const route = props.route;
+  const useHistor = useHistory();
+  const useParam = useParams();
+  const useLocatio = useLocation();
+  const useRouteMatc = useRouteMatch();
   useEffect(() => {
 
   }, []);
@@ -10,7 +15,9 @@ function Home(props) {
   return (
     <div>
       <h1>Home</h1>
-      {/* {console.log('Home:', route)} */}
+      {
+        // console.log('Home:', useRouteMatc )
+    }
 
       <NestedMenu route={props.route} id={'homeId'}>
 
