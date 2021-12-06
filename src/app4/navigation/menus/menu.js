@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 function Menu(props) {
     const level = props.level;
-    const routes = props.routesHomeContent;
-
+    const routes = props.routes;
+    const typeId = props.id;
     useEffect(() => {
-
+        console.log('Menu:', typeId)
     }, []);
     return (
         <>
