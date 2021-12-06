@@ -10,14 +10,11 @@ function Home(props) {
   return (
     <div>
       <h1>Home</h1>
-      {console.log('Home:', route)}
+      {/* {console.log('Home:', route)} */}
       <NestedMenu route={props.route}>
 
       </NestedMenu>
-      <img
-        src="https://via.placeholder.com/640x480?text=Home"
-        alt="Home"
-      />
+      <img src="https://via.placeholder.com/640x480?text=Home" alt="Home" />
       <h1>Home</h1>
     </div>
   );

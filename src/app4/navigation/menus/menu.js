@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Menu(props) {
     const level = props.level;
-    const routes = props.linkRoutes;
+    const routes = props.routesHomeContent;
 
     useEffect(() => {
 

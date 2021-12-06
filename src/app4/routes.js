@@ -22,7 +22,7 @@ export const routes = [
     path: "/",
     label: "Home",
     component: Home,
-    linkRoutes: [
+    routesHomeContent: [
       {
         path: "/convert-audio",
         label: "Audio File",
