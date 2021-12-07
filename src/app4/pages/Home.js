@@ -17,12 +17,14 @@ function Home(props) {
     <div>
       <h1>Home</h1>
       {
-        // console.log('Home:', useRouteMatc )
+         console.log('Home:', useLocatio.pathname )
     }
 
       <NestedMenu route={props.route} id={'homeId'}>
 
       </NestedMenu>
+      <div>{props.route && (<Breadcrumbs route={props.route}> </Breadcrumbs>)} {`${useLocatio.pathname}`}</div>
+      
       
       <img src="https://via.placeholder.com/640x480?text=Home" alt="Home" />
     </div>
