@@ -5,6 +5,7 @@ function Menu(props) {
     const level = props.level;
     const routes = props.routes;
     const homePage = props.homePage;
+    const footer = props.footer;
     const typeId = props.pid;
     useEffect(() => {
         console.log('Menu:', typeId)
@@ -37,7 +38,20 @@ function Menu(props) {
                                                     ))
                                                 }
                                             </ul>
-                                        </nav>) : <h1>Menu null</h1>
+                                        </nav>) :
+                (typeId == 'footerId') ? (<nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
+                                        <ul>
+                                            {
+                                                footer.map((route, index) => (
+                                                    <li key={index}>
+                                                        <NavLink key={index} to={route.path} className={`${route.className}`}>
+                                                            {route.label}
+                                                        </NavLink>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </nav>) :<h1>Menu null</h1>
             }
             
         </>

@@ -9,21 +9,22 @@ function NestedMenu(props) {
   const typeId = props.pid;
 
   useEffect(() => {
-    console.log('NestedMenu1:', route.routes,typeId)
-    console.log('NestedMenu2:', route.homePage, typeId)
-    console.log('NestedMenu3:', route.footer, typeId)
-    if(typeId == 'pageId' && route.routes)
-    {
-      console.log('NestedMenu:', route)
-    }else if(typeId == 'homeId' && route.homePage){
-      console.log('NestedMenu:', route.homePage)
+    // console.log('NestedMenu1:', route.routes, typeId)
+    // console.log('NestedMenu2:', route.homePage, typeId)
+    // console.log('NestedMenu3:', route.footer, typeId)
+    if (typeId == 'pageId' && route.routes) {
+      console.log('pageId NestedMenu:', route.routes)
+    } else if (typeId == 'homeId' && route.homePage) {
+      console.log('homeId NestedMenu:', route.homePage)
+    } else if (typeId == 'footerId' && route.footer) {
+      console.log('footerId NestedMenu:', route.footer)
     }
   }, [route])
 
-  
+
   return (
     <>
-    {console.log('NestedMenu:', route)}
+
       {
         (typeId == 'pageId') ? (pathTo(route)
                                 .filter(rt => rt.routes)
@@ -56,7 +57,16 @@ function NestedMenu(props) {
 
                                       </Menu>
                                     )
-                                  })) : <h1>NestedMenu: Page Not Found (null) </h1>
+                                  })) :
+          (typeId == 'footerId') ? (pathTo(route)
+                                    .filter(rt => rt.footer)
+                                    .map(function (rt, index) {
+                                      return (
+                                        <Menu key={index} footer={rt.footer} level={index} {...props}>
+
+                                        </Menu>
+                                      )
+                                    })) : <h1>NestedMenu: Page Not Found (null) </h1>
       }
 
     </>

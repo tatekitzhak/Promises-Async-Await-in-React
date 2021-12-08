@@ -16,10 +16,6 @@ function Home(props) {
   return (
     <div>
       <h1>Home</h1>
-      {
-         console.log('Home:', useLocatio.pathname )
-    }
-
       <NestedMenu route={props.route} pid={'homeId'}>
 
       </NestedMenu>
