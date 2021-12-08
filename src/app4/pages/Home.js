@@ -15,7 +15,7 @@ function Home(props) {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Home{console.log('Home:',props)}</h1>
       <NestedMenu route={props.route} pid={'homeId'}>
 
       </NestedMenu>

@@ -8,7 +8,7 @@ function Menu(props) {
     const footer = props.footer;
     const typeId = props.pid;
     useEffect(() => {
-        console.log('Menu:', typeId)
+        
     }, []);
     return (
         <>
@@ -20,6 +20,7 @@ function Menu(props) {
                                                         <li key={index}>
                                                             <NavLink key={index} to={route.path} className={`${route.className}`}>
                                                                 {route.label}
+                                                                {console.log('NavLink Menu homeId:', props)}
                                                             </NavLink>
                                                         </li>
                                                     ))

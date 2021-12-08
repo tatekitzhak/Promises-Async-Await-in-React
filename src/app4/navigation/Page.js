@@ -21,10 +21,11 @@ function Page(props) {
         </NestedMenu>
 
         {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
+        <div className="pageBody">
+          <PageBody route={props.route} page={'Page'}>
 
-        <PageBody route={props.route} page={'Page'}>
-
-        </PageBody>
+          </PageBody>
+        </div>
 
         <Footer route={props.route}>
           <h1>Footer</h1>
