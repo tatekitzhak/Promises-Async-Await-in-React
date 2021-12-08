@@ -20,7 +20,6 @@ function Menu(props) {
                                                         <li key={index}>
                                                             <NavLink key={index} to={route.path} className={`${route.className}`}>
                                                                 {route.label}
-                                                                {console.log('NavLink Menu homeId:', props)}
                                                             </NavLink>
                                                         </li>
                                                     ))

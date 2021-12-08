@@ -18,19 +18,25 @@ function NestedMenu(props) {
 
   function toggleReducer(action) {
 
-    console.log('toggleReducer:', action.rt.homePage)
+    //console.log('toggleReducer:', action)
     switch (action.typeId) {
-      case typeId: {
-         console.log('pageId NestedMenu:', route.routes)
+      case 1:{
+        return console.log('pageId NestedMenu:', route.routes)
       }
-      case typeId: {
+      break;
+      case 2:{
         return (<Menu key={action.index} homePage={action.rt.homePage} level={action.index} {...props}>
                   <h1>Menu</h1>
                 </Menu>)
-      }
+        }
+        break;
       case typeId: {
-        console.log('footerId NestedMenu:', route.footer)
-      }
+        return console.log('footerId NestedMenu:',typeId)
+        // return (<Menu key={action.index} footer={action.rt.footer} level={action.index} {...props}>
+        //           <h1>Menu</h1>
+        //         </Menu>)
+        }
+        break;
       default: {
         throw new Error(`Unhandled type:`)
       }
@@ -66,16 +72,17 @@ function NestedMenu(props) {
           (typeId == 'homeId') ? (pathTo(route)
                                   .filter(rt => rt.homePage)
                                   .map(function (rt, index) {
-                                    return ( toggleReducer({typeId, index, rt})
-                                      // <Menu key={index} homePage={rt.homePage} level={index} {...props}>
-                                      //   <h1>Menu</h1>
-                                      // </Menu>
+                                    return ( 
+                                      //toggleReducer({typeId, index, rt})
+                                      <Menu key={index} homePage={rt.homePage} level={index} {...props}>
+                                        <h1>Menu</h1>
+                                      </Menu>
                                     )
                                   })) :
           (typeId == 'footerId') ? (pathTo(route)
                                     .filter(rt => rt.footer)
                                     .map(function (rt, index) {
-                                      return (
+                                      return ( 
                                         <Menu key={index} footer={rt.footer} level={index} {...props}>
 
                                         </Menu>
