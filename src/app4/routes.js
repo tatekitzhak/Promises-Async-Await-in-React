@@ -4,10 +4,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Users from "./pages/Users";
 import Pricing from "./pages/Pricing";
-import Task1 from "./pages/task1";
-import Topic1 from "./pages/task1/topic1";
-import Topic2 from "./pages/task1/topic2";
-import Subtopic from "./pages/task1/subtopic";
+import Topics from "./pages/topics";
+import Topic1 from "./pages/topics/topic1";
+import Topic2 from "./pages/topics/topic2";
+import Subtopic from "./pages/topics/subtopic";
 
 import Team from "./pages/About/Team";
 import Careers from "./pages/About/Careers";
@@ -15,6 +15,7 @@ import Careers from "./pages/About/Careers";
 import Basic from "./pages/Pricing/Basic";
 import Corporate from "./pages/Pricing/Corporate";
 import Footer from "./pages/footer";
+import Policy from "./pages/policy";
 
 
 export const routes = [
@@ -58,9 +59,9 @@ export const routes = [
         component: Users,
         routes:[
           {
-            path: "/",
-            label: "FooterUsers",
-            component: Footer
+            path: "/user1",
+            label: "User1",
+            component: Users
           }
         ]
       },
@@ -82,35 +83,48 @@ export const routes = [
         ]
       },
       {
-        path: "/task1",
-        label: "Task1",
-        id: "task1",
-        component: Task1,
+        path: "/topics",
+        label: "Topics",
+        id: "topics",
+        component: Topics,
         routes: [
           {
             path: "/topic1",
             label: "Topic1",
-            className: "drawer-menu-item",
             component: Topic1,
             routes: [
               {
-                path: "/subtopic",
-                label: "Subtopic",
+                path: "/subtopic1",
+                label: "Subtopic1",
                 component: Subtopic
-              },
-              {
-                path: "/subtopic2",
-                label: "Subtopic2",
-                component: Topic2
               }
             ]
           },
           {
             path: "/topic2",
             label: "Topic2",
-            component: Topic2
+            component: Topic2,
+            routes: [
+              {
+                path: "/subtopic2",
+                label: "Subtopic2",
+                component: Topic2
+              }
+            ]
           }
         ]
+      }
+    ],
+    footer:[
+      {
+        path: "/terms",
+        label: "Terms",
+        component: Policy
+      },
+      {
+        path: "/privacy",
+        label: "Privacy",
+        component: Policy
       }
     ]
   }

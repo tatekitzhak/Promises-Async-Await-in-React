@@ -12,7 +12,19 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-  
+  nav#menu-id-0 > ul{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr) );
+    background-color: #fff;
+    color: #444;
+  }
+  nav#menu-id-0 > ul > li{
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+  }
   a,
   a:hover {
     color: #2078ff;

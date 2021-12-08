@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import NestedMenu from "../navigation/NestedMenu";
 
 function Footer(props) {
 
@@ -10,9 +11,14 @@ function Footer(props) {
 
     return (
         <>
+
             {/* <!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.--> */}
             <footer className="flex-rw">
-                <ul className="footer-list-top">
+                {props.children}
+                <NestedMenu route={props.route} id={'homeId'}>
+
+                </NestedMenu>
+                {/* <ul className="footer-list-top">
                     <li> <h4 className="footer-list-header">About Pavilion</h4></li>
                     <li><a href='/shop/about-mission' className="generic-anchor footer-list-anchor" >GET TO KNOW US</a></li>
                     <li><a href='/promos.html' className="generic-anchor footer-list-anchor" >PROMOS</a></li>
@@ -56,8 +62,10 @@ function Footer(props) {
                     <div className="footer-bottom-wrapper">
                         <a href="/terms-of-use.html" className="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" className="generic-anchor" rel="nofollow">Privacy</a>
                     </div>
-                </section>
+                </section> */}
             </footer>
+
+
         </>);
 }
 
