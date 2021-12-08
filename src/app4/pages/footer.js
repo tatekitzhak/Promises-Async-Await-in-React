@@ -15,7 +15,7 @@ function Footer(props) {
             {/* <!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.--> */}
             <footer className="flex-rw">
                 {props.children}
-                <NestedMenu route={props.route} id={'homeId'}>
+                <NestedMenu route={props.route} pid={'footerId'}>
 
                 </NestedMenu>
                 {/* <ul className="footer-list-top">

@@ -1,33 +1,35 @@
-import React, {Children} from "react";
+import React, { Children, useRef } from "react";
 import { useHistory, useLocation, useParams, useRouteMatch } from "react-router-dom";
 import NestedMenu from "./NestedMenu";
 import Breadcrumbs from "./Breadcrumbs";
 import Footer from "../pages/footer";
 
-function Page(props){
+function Page(props) {
   const useRouteMatc = useRouteMatch();
- const PageBody = props.route.component;
+  const page = useRef();
+  const PageBody = props.route.component;
 
- /* const Footer = Children.map(props.children, child => (
-   <div>{child}</div>
- )); */
+  /* const Footer = Children.map(props.children, child => (
+    <div>{child}</div>
+  )); */
 
   return (
     <>
-      <NestedMenu route={props.route} id={'pageId'}>
+      <div >
+        <NestedMenu route={props.route} pid={'pageId'}>
 
-      </NestedMenu>
+        </NestedMenu>
 
-      {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
+        {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
 
-      <PageBody route={props.route} page={'Page'}>
+        <PageBody route={props.route} page={'Page'}>
 
-      </PageBody>
+        </PageBody>
 
-      <Footer route={props.route}>
-        <h1>Footer</h1>
-      </Footer>
-
+        <Footer route={props.route}>
+          <h1>Footer</h1>
+        </Footer>
+      </div>
     </>
   );
 };

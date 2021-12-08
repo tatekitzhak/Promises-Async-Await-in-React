@@ -6,15 +6,24 @@ import Menu from "./menus/menu";
 
 function NestedMenu(props) {
   const route = props.route;
-  const typeId = props.id;
+  const typeId = props.pid;
 
   useEffect(() => {
-    
-  }, [])
+    console.log('NestedMenu1:', route.routes,typeId)
+    console.log('NestedMenu2:', route.homePage, typeId)
+    console.log('NestedMenu3:', route.footer, typeId)
+    if(typeId == 'pageId' && route.routes)
+    {
+      console.log('NestedMenu:', route)
+    }else if(typeId == 'homeId' && route.homePage){
+      console.log('NestedMenu:', route.homePage)
+    }
+  }, [route])
 
-  console.log('NestedMenu:', typeId)
+  
   return (
     <>
+    {console.log('NestedMenu:', route)}
       {
         (typeId == 'pageId') ? (pathTo(route)
                                 .filter(rt => rt.routes)
@@ -40,14 +49,14 @@ function NestedMenu(props) {
                                   )
                                 })) :
           (typeId == 'homeId') ? (pathTo(route)
-                                  .filter(rt => rt.routesHomeContent)
+                                  .filter(rt => rt.homePage)
                                   .map(function (rt, index) {
                                     return (
-                                      <Menu key={index} routesHomeContent={rt.routesHomeContent} level={index} {...props}>
+                                      <Menu key={index} homePage={rt.homePage} level={index} {...props}>
 
                                       </Menu>
                                     )
-                                  })) : <h1>NestedMenu null </h1>
+                                  })) : <h1>NestedMenu: Page Not Found (null) </h1>
       }
 
     </>

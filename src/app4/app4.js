@@ -16,9 +16,7 @@ function App4(props) {
             return (
               <Route key={route.path} path={route.path}>
                 <Page route={route} {...props}>
-                  <Footer route={route}>
-
-                  </Footer>
+                  
                 </Page>
               </Route>
             )

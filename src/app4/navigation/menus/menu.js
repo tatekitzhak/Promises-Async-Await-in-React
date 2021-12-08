@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 function Menu(props) {
     const level = props.level;
     const routes = props.routes;
-    const routesHomeContent = props.routesHomeContent;
-    const typeId = props.id;
+    const homePage = props.homePage;
+    const typeId = props.pid;
     useEffect(() => {
         console.log('Menu:', typeId)
     }, []);
@@ -15,7 +15,7 @@ function Menu(props) {
                 (typeId == 'homeId') ? (<nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
                                             <ul>
                                                 {
-                                                    routesHomeContent.map((route, index) => (
+                                                    homePage.map((route, index) => (
                                                         <li key={index}>
                                                             <NavLink key={index} to={route.path} className={`${route.className}`}>
                                                                 {route.label}
