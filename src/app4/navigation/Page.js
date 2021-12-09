@@ -5,29 +5,23 @@ import Breadcrumbs from "./Breadcrumbs";
 import Footer from "../pages/footer";
 
 function Page(props) {
-  const useRouteMatc = useRouteMatch();
-  const page = useRef();
   const PageBody = props.route.component;
-
-  /* const Footer = Children.map(props.children, child => (
-    <div>{child}</div>
-  )); */
 
   return (
     <>
       <div >
-        <NestedMenu route={props.route} pid={'pageId'}>
+        <NestedMenu route={props.route} pid={'pageId'} nestedMenu={'NestedMenu'}>
 
         </NestedMenu>
 
-        {props.route.parent && (<Breadcrumbs route={props.route}> </Breadcrumbs>)}
+        {props.route.parent && (<Breadcrumbs route={props.route} breadcrumbs={'Breadcrumbs'}> </Breadcrumbs>)}
         <div className="pageBody">
-          <PageBody route={props.route} page={'Page'}>
+          <PageBody route={props.route} page={'PageBody'}>
 
           </PageBody>
         </div>
 
-        <Footer route={props.route}>
+        <Footer route={props.route} footer={'Footer'}>
           <h1>Footer</h1>
         </Footer>
       </div>

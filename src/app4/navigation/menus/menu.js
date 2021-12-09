@@ -9,7 +9,6 @@ function Menu(props) {
     const typeId = props.pid;
     const [classNameAtt, setClassNameAtt] = useState("");
     useEffect(() => {
-       console.log('Menu 2:', props.route.id, props.level )
         if(props.level ){
             console.log('Menu 1:', props.route.id, props.level )
             setClassNameAtt('drawer-nav topics_menu');
@@ -56,7 +55,7 @@ function Menu(props) {
                                                 ))
                                             }
                                         </ul>
-                                    </nav>) :<h1>Menu null</h1>
+                                    </nav>) :<h1>Menu: Page Not Found (null) </h1>
             }
             
         </>

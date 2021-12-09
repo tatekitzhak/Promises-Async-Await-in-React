@@ -42,17 +42,25 @@ function NestedMenu(props) {
   }
   useEffect(() => {
     $(document).ready(function () {
+      
+      try {
+        const ele = $('.drawer');
+        console.log('.drawer1',ele)
+        ele.drawer();
+        console.log('.drawer2',ele[0])
 
-      $('.drawer').drawer();
-  
-      // $('.drawer').on('drawer.opened', function(){
-      //   console.log("drawer.opened");
-      // });
-  
-      // $('.drawer').on('drawer.closed', function(){
-  
-      //   console.log("drawer.closed");
-      // });
+        ele.on('drawer.opened', function(){
+          console.log("drawer.opened");
+        });
+    
+        ele.on('drawer.closed', function(){
+    
+          console.log("drawer.closed");
+        });
+      }
+      catch(err) {
+        console.log("An error occured in jQuery:",err);
+      }
     });
    
   }, [route])
@@ -64,7 +72,7 @@ function NestedMenu(props) {
                                 .map(function (rt, index) {
                                   if (index == 1 && rt.id == "topics") {
                                     return (
-                                      <div key={index} className="drawer drawer--left">
+                                      <div key={index} className={`section-nav-${index} drawer drawer--left`}>
                                         <h1>Navigation Bar - Topic</h1>
                                         <header className="drawer-navbar" role="banner">
                                           <div className="drawer-container">
@@ -82,7 +90,7 @@ function NestedMenu(props) {
                                     )
                                   }
                                   return (
-                                    <div key={index} className="submenu">
+                                    <div key={index} className={`section-nav-${index}`}>
                                     { menuReducer({ typeId, rt, index }) }
                                     </div> );
                                 })) :
