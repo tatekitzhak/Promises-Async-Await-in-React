@@ -74,7 +74,7 @@ function NestedMenu(props) {
                                                 <span className="sr-only">toggle navigation</span>
                                                 <span className="drawer-hamburger-icon"></span>
                                               </button>
-                                            </div>
+                                            </div >
                                             { menuReducer({ typeId, rt, index })}
                                             </div>
                                           </header>
@@ -82,7 +82,7 @@ function NestedMenu(props) {
                                     )
                                   }
                                   return (
-                                    <div >
+                                    <div key={index} className="submenu">
                                     { menuReducer({ typeId, rt, index }) }
                                     </div> );
                                 })) :
