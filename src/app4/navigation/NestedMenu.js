@@ -1,7 +1,9 @@
 import React, { useEffect, useReducer, useState } from "react";
 import { pathTo } from "./utils";
 import Menu from "./menus/menu";
-
+import 'iscroll';
+import $ from 'jquery';
+import 'jquery-drawer';
 
 
 function NestedMenu(props) {
@@ -38,7 +40,22 @@ function NestedMenu(props) {
       }
     }
   }
+  useEffect(() => {
+    $(document).ready(function () {
 
+      $('.drawer').drawer();
+  
+      // $('.drawer').on('drawer.opened', function(){
+      //   console.log("drawer.opened");
+      // });
+  
+      // $('.drawer').on('drawer.closed', function(){
+  
+      //   console.log("drawer.closed");
+      // });
+    });
+   
+  }, [route])
   return (
     <>
       {
@@ -47,16 +64,27 @@ function NestedMenu(props) {
                                 .map(function (rt, index) {
                                   if (index == 1 && rt.id == "topics") {
                                     return (
-                                      <div key={index} className="drawer">
-                                        <button type="button" className="drawer-toggle drawer-hamburger">
-                                          <span className="sr-only">toggle navigation</span>
-                                          <span className="drawer-hamburger-icon"></span>
-                                        </button>
-                                        { menuReducer({ typeId, rt, index })}
-                                      </div>
+                                      <div key={index} className="drawer drawer--left">
+                                        <h1>Navigation Bar - Topic</h1>
+                                        <header className="drawer-navbar" role="banner">
+                                          <div className="drawer-container">
+                                            <div className="drawer-navbar-header">
+                                              <p className="drawer-brand" >Topic</p>
+                                              <button type="button" className="drawer-toggle drawer-hamburger">
+                                                <span className="sr-only">toggle navigation</span>
+                                                <span className="drawer-hamburger-icon"></span>
+                                              </button>
+                                            </div>
+                                            { menuReducer({ typeId, rt, index })}
+                                            </div>
+                                          </header>
+                                        </div>
                                     )
                                   }
-                                  return ( menuReducer({ typeId, rt, index }) );
+                                  return (
+                                    <div >
+                                    { menuReducer({ typeId, rt, index }) }
+                                    </div> );
                                 })) :
         (typeId == 'homeId') ? (pathTo(route)
                                 .filter(rt => rt.homePage)

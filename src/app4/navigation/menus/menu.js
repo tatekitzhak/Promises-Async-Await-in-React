@@ -7,13 +7,17 @@ function Menu(props) {
     const homePage = props.homePage;
     const footer = props.footer;
     const typeId = props.pid;
+    const [classNameAtt, setClassNameAtt] = useState("");
     useEffect(() => {
-        
-    }, []);
+        if(props.level && props.route.id == 'topics'){
+            console.log('Menu 1:', props.route.id)
+            setClassNameAtt('drawer-nav topics_menu');
+          }
+    }, [routes]);
     return (
         <>
             {
-                (typeId == 'homeId') ? (<nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
+                (typeId == 'homeId') ? (<nav id={`menu-id-${level}`} className={`menu menu-level-${level}`} >
                                             <ul>
                                                 {
                                                     homePage.map((route, index) => (
@@ -26,8 +30,8 @@ function Menu(props) {
                                                 }
                                             </ul>
                                         </nav>) :
-                (typeId == 'pageId') ? (<nav id={`menu-id-${level}`} className={`menu menu-level-${level} `}>
-                                            <ul>
+                (typeId == 'pageId') ? (<nav id={`menu-id-${level}`} className={`${classNameAtt} menu menu-level-${level}`} role="navigation">
+                                            <ul className="navbar-nav ml-auto">
                                                 {
                                                     routes.map((route, index) => (
                                                         <li key={index}>
