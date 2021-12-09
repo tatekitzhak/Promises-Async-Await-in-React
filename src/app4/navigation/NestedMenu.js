@@ -16,35 +16,25 @@ function NestedMenu(props) {
     console.log('footerId NestedMenu:', route.footer)
   } */
 
-  function toggleReducer(action) {
-
-    console.log('toggleReducer:', action)
+  function menuReducer(action) {
     switch (action.typeId) {
-      case 'pageId':{
-        return (<Menu key={action.index} routes={action.rt.routes} level={action.index} {...props}>
-
-                </Menu>)
-        // console.log('pageId NestedMenu:', action.typeId)
-        
+      case 'pageId': {
+        return (
+          <Menu key={action.index} routes={action.rt.routes} level={action.index} {...props}>
+          </Menu>)
       }
-      
-      case 'homeId':{
-        return (  
-          // console.log('homeId NestedMenu:', action.typeId))
-        <Menu key={action.index} homePage={action.rt.homePage} level={action.index} {...props}>
-                  <h1>Menu</h1>
-                </Menu>)
-        }
-        break;
+      case 'homeId': {
+        return (
+          <Menu key={action.index} homePage={action.rt.homePage} level={action.index} {...props}>
+          </Menu>)
+      }
       case 'footerId': {
-        // return console.log('footerId NestedMenu:',action.typeId)
-        return (<Menu key={action.index} footer={action.rt.footer} level={action.index} {...props}>
-                  <h1>Menu</h1>
-                </Menu>)
-        }
-        break;
+        return (
+          <Menu key={action.index} footer={action.rt.footer} level={action.index} {...props}>
+          </Menu>)
+      }
       default: {
-        throw new Error(`Unhandled type:`)
+        throw new Error(`Unhandled type:${action}`)
       }
     }
   }
@@ -55,45 +45,29 @@ function NestedMenu(props) {
         (typeId == 'pageId') ? (pathTo(route)
                                 .filter(rt => rt.routes)
                                 .map(function (rt, index) {
-                                  console.log('index pageId:',index)
                                   if (index == 1 && rt.id == "topics") {
-                                    return ( 
+                                    return (
                                       <div key={index} className="drawer">
                                         <button type="button" className="drawer-toggle drawer-hamburger">
                                           <span className="sr-only">toggle navigation</span>
                                           <span className="drawer-hamburger-icon"></span>
                                         </button>
-                                        {toggleReducer({typeId,rt,index})}
+                                        { menuReducer({ typeId, rt, index })}
                                       </div>
                                     )
                                   }
-                                  return (  toggleReducer({typeId,rt,index})
-                                    // <Menu key={index} routes={rt.routes} level={index} {...props}>
-
-                                    // </Menu>
-                                  )
+                                  return ( menuReducer({ typeId, rt, index }) );
                                 })) :
-          (typeId == 'homeId') ? (pathTo(route)
-                                  .filter(rt => rt.homePage)
+        (typeId == 'homeId') ? (pathTo(route)
+                                .filter(rt => rt.homePage)
+                                .map(function (rt, index) {
+                                  return ( menuReducer({ typeId, rt, index }));
+                                })) :
+        (typeId == 'footerId') ? (pathTo(route)
+                                  .filter(rt => rt.footer)
                                   .map(function (rt, index) {
-                                    console.log('index homeId:',index)
-                                    return ( 
-                                      toggleReducer({typeId,rt,index})
-                                      // <Menu key={index} homePage={rt.homePage} level={index} {...props}>
-                                      //   <h1>Menu</h1>
-                                      // </Menu>
-                                    )
-                                  })) :
-          (typeId == 'footerId') ? (pathTo(route)
-                                    .filter(rt => rt.footer)
-                                    .map(function (rt, index) {
-                                      console.log('index footerId:',index)
-                                      return ( toggleReducer({typeId,rt,index})
-                                        // <Menu key={index} footer={rt.footer} level={index} {...props}>
-
-                                        // </Menu>
-                                      )
-                                    })) : <h1>NestedMenu: Page Not Found (null) </h1>
+                                    return (menuReducer({ typeId, rt, index }) );
+                                  })) : <h1>NestedMenu: Page Not Found (null) </h1>
       }
 
     </>
