@@ -6,7 +6,7 @@ import Footer from "../pages/footer";
 
 function Page(props) {
   const PageBody = props.route.component;
-
+  console.log('Page:', props)
   return (
     <>
       <div >
@@ -15,16 +15,17 @@ function Page(props) {
         </NestedMenu>
 
         {props.route.parent && (<Breadcrumbs route={props.route} breadcrumbs={'Breadcrumbs'}> </Breadcrumbs>)}
-        
+
         <div className="pageBody">
           <PageBody route={props.route} page={'PageBody'}>
-
+            
           </PageBody>
         </div>
 
         <Footer route={props.route} footer={'Footer'}>
           <h1>Footer</h1>
         </Footer>
+        
       </div>
     </>
   );

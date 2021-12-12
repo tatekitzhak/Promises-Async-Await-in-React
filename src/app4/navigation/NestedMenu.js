@@ -9,7 +9,7 @@ import 'jquery-drawer';
 function NestedMenu(props) {
   const route = props.route;
   const typeId = props.pid;
-
+  
   /* if (typeId == 'pageId' && route.routes) {
     console.log('pageId NestedMenu:', route.routes)
   } else if (typeId == 'homeId' && route.homePage) {
@@ -28,6 +28,11 @@ function NestedMenu(props) {
       case 'homeId': {
         return (
           <Menu key={action.index} homePage={action.rt.homePage} level={action.index} {...props}>
+          </Menu>)
+      }
+      case 'topicsId': {
+        return (
+          <Menu key={action.index} topics={action.rt.topics} level={action.index} {...props}>
           </Menu>)
       }
       case 'footerId': {
@@ -99,6 +104,11 @@ function NestedMenu(props) {
                                 .map(function (rt, index) {
                                   return ( menuReducer({ typeId, rt, index }));
                                 })) :
+        (typeId == 'topicsId') ? (pathTo(route)
+                                  .filter(rt => rt.topics)
+                                  .map(function (rt, index) {
+                                    return (menuReducer({ typeId, rt, index }) );
+                                  })) : 
         (typeId == 'footerId') ? (pathTo(route)
                                   .filter(rt => rt.footer)
                                   .map(function (rt, index) {

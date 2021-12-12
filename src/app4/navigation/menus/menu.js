@@ -3,13 +3,18 @@ import { NavLink } from "react-router-dom";
 
 function Menu(props) {
     const level = props.level;
-    const routes = props.routes;
-    const homePage = props.homePage;
-    const footer = props.footer;
     const typeId = props.pid;
 
+    const routes = props.routes;
+    const homePage = props.homePage;
+    const topics = props.topics;
+    const footer = props.footer;
+    
+
+    console.log('Menu:', topics)
     const [classNameAtt, setClassNameAtt] = useState("");
     const [roleAtt, setRoleAtt] = useState("");
+
     useEffect(() => {
         if(props.level== 1 && props.route.id == 'topics'){
             console.log('Menu 1:', props.route.id, props.level )
@@ -17,6 +22,7 @@ function Menu(props) {
             setRoleAtt('navigation');
           }
     }, [routes]);
+
     return (
         <>
             {
@@ -46,10 +52,10 @@ function Menu(props) {
                                                 }
                                             </ul>
                                         </nav>) :
-                (typeId == 'footerId') ? (<nav id={`${typeId} menu-id-${level}`} className={`menu menu-level-${level} `}>
+                (typeId == 'topicsId') ? (<nav id={`${typeId} menu-id-${level}`} className={`menu menu-level-${level} `}>
                                         <ul>
                                             {
-                                                footer.map((route, index) => (
+                                                topics.map((route, index) => (
                                                     <li key={index}>
                                                         <NavLink key={index} to={route.path} className={`${route.className}`}>
                                                             {route.label}
@@ -58,7 +64,20 @@ function Menu(props) {
                                                 ))
                                             }
                                         </ul>
-                                    </nav>) :<h1>Menu: Page Not Found (null) </h1>
+                                    </nav>) :
+                 (typeId == 'footerId') ? (<nav id={`${typeId} menu-id-${level}`} className={`menu menu-level-${level} `}>
+                                                <ul>
+                                                    {
+                                                        footer.map((route, index) => (
+                                                            <li key={index}>
+                                                                <NavLink key={index} to={route.path} className={`${route.className}`}>
+                                                                    {route.label}
+                                                                </NavLink>
+                                                            </li>
+                                                        ))
+                                                    }
+                                                </ul>
+                                            </nav>):<h1>Menu: Page Not Found (null) </h1>
             }
             
         </>

@@ -17,6 +17,7 @@ function Home(props) {
     <div>
       <h1>Home</h1>
       <div>{props.route && (<Breadcrumbs route={props.route}> </Breadcrumbs>)} {`${useLocatio.pathname}`}</div>
+      
       <NestedMenu route={props.route} pid={'homeId'}>
 
       </NestedMenu>
