@@ -45,7 +45,7 @@ function NestedMenu(props) {
       
       try {
         const ele = $('.drawer');
-        console.log('.drawer1',ele)
+        /* console.log('.drawer1',ele)
         ele.drawer();
         console.log('.drawer2',ele[0])
 
@@ -56,7 +56,7 @@ function NestedMenu(props) {
         ele.on('drawer.closed', function(){
     
           console.log("drawer.closed");
-        });
+        }); */
       }
       catch(err) {
         console.log("An error occured in jQuery:",err);

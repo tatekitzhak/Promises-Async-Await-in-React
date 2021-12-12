@@ -14,7 +14,6 @@ import Careers from "./pages/About/Careers";
 
 import Basic from "./pages/Pricing/Basic";
 import Corporate from "./pages/Pricing/Corporate";
-import Footer from "./pages/footer";
 import Policy from "./pages/policy";
 
 
@@ -111,6 +110,32 @@ export const routes = [
                 component: Topic2
               }
             ]
+          }
+        ]
+      }
+    ],
+    topics: [
+      {
+        path: "/topic1",
+        label: "Topic1",
+        component: Topic1,
+        routes: [
+          {
+            path: "/subtopic1",
+            label: "Subtopic1",
+            component: Subtopic
+          }
+        ]
+      },
+      {
+        path: "/topic2",
+        label: "Topic2",
+        component: Topic2,
+        routes: [
+          {
+            path: "/subtopic2",
+            label: "Subtopic2",
+            component: Topic2
           }
         ]
       }

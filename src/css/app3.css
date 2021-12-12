@@ -198,16 +198,6 @@ h3 {
 html, body {
   height: 100%
 }
-body {
-	font: 11px "Open Sans", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	margin: auto;
-  display: flex;
-  flex-flow: column nowrap;
-  /* This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11 */
-  justify-content: space-between
-}
 ul {
   list-style: none
 }

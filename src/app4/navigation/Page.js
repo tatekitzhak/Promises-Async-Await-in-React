@@ -15,6 +15,7 @@ function Page(props) {
         </NestedMenu>
 
         {props.route.parent && (<Breadcrumbs route={props.route} breadcrumbs={'Breadcrumbs'}> </Breadcrumbs>)}
+        
         <div className="pageBody">
           <PageBody route={props.route} page={'PageBody'}>
 
