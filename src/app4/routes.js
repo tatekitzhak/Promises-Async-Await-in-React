@@ -159,7 +159,7 @@ export const routes_topics = [
   {
     path: "/foo",
     label: "foo",
-    component: Home,
+    component: Topics,
     routes: [
       {
         path: "/topic1",

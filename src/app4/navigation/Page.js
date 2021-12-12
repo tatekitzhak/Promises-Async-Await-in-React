@@ -6,7 +6,6 @@ import Footer from "../pages/footer";
 
 function Page(props) {
   const PageBody = props.route.component;
-  console.log('Page:', props)
   return (
     <>
       <div >

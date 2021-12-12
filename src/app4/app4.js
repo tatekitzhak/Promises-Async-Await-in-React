@@ -4,19 +4,29 @@ import Page from "./navigation/Page";
 
 function App4(props) {
   const routes = props.routes;
-  const topics = props.topics_path
-  //const topics1 = [routes,topics]
-  console.log('App4:', props)
+  const topics = props.topics_path;
+
+  
   return (
     <BrowserRouter>
       <Switch>
         {
           routes.map(function (route, index) {
+            console.log('App4:', route)
             return (
               <Route key={route.path} path={route.path}>
-                <Page route={route} {...props}>
+                
+                <div className={`header`}>
+                  <Page route={route} {...props}>
                   
-                </Page>
+                  </Page>
+                </div>
+
+                <div className={`home`}>
+                  {/* <Page route={route} {...props}>
+                  
+                  </Page> */}
+                </div>
               
               </Route>
             )
