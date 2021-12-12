@@ -154,3 +154,50 @@ export const routes = [
     ]
   }
 ];
+
+export const routes_topics = [
+  {
+    path: "/foo",
+    label: "foo",
+    component: Home,
+    routes: [
+      {
+        path: "/topic1",
+        label: "Topic1",
+        component: Topics,
+        routes: [
+          {
+            path: "/subtopic1",
+            label: "Subtopic1",
+            component: Subtopic
+          }
+        ]
+      },
+      {
+        path: "/topic2",
+        label: "Topic2",
+        component: Topics,
+        routes: [
+          {
+            path: "/subtopic2",
+            label: "Subtopic2",
+            component: Subtopic
+          }
+        ]
+      },
+      {
+        path: "/topic3",
+        label: "Topic3",
+        component: Topics,
+        routes: [
+          {
+              path: "/subtopic3",
+              label: "Subtopic3",
+              component: Subtopic
+          }
+        ]
+      }
+    ]
+  }
+];
+

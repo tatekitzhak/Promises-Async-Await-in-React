@@ -4,6 +4,9 @@ import Page from "./navigation/Page";
 
 function App4(props) {
   const routes = props.routes;
+  const topics = props.topics_path
+  //const topics1 = [routes,topics]
+  console.log('App4:', props)
   return (
     <BrowserRouter>
       <Switch>
@@ -14,9 +17,10 @@ function App4(props) {
                 <Page route={route} {...props}>
                   
                 </Page>
+              
               </Route>
             )
-          })
+          }) 
         }
       </Switch>
     </BrowserRouter>
