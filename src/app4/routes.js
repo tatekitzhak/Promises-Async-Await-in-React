@@ -16,6 +16,38 @@ import Basic from "./pages/Pricing/Basic";
 import Corporate from "./pages/Pricing/Corporate";
 import Policy from "./pages/policy";
 
+const topics = {
+  path: "/topics",
+  label: "Topics",
+  id: "topics",
+  component: Topics,
+  routes: [
+    {
+      path: "/topic1",
+      label: "Topic1",
+      component: Topic1,
+      routes: [
+        {
+          path: "/subtopic1",
+          label: "Subtopic1",
+          component: Subtopic
+        }
+      ]
+    },
+    {
+      path: "/topic2",
+      label: "Topic2",
+      component: Topic2,
+      routes: [
+        {
+          path: "/subtopic2",
+          label: "Subtopic2",
+          component: Topic2
+        }
+      ]
+    }
+  ]
+};
 
 export const routes = [
   {
@@ -81,38 +113,7 @@ export const routes = [
           }
         ]
       },
-      {
-        path: "/topics",
-        label: "Topics",
-        id: "topics",
-        component: Topics,
-        routes: [
-          {
-            path: "/topic1",
-            label: "Topic1",
-            component: Topic1,
-            routes: [
-              {
-                path: "/subtopic1",
-                label: "Subtopic1",
-                component: Subtopic
-              }
-            ]
-          },
-          {
-            path: "/topic2",
-            label: "Topic2",
-            component: Topic2,
-            routes: [
-              {
-                path: "/subtopic2",
-                label: "Subtopic2",
-                component: Topic2
-              }
-            ]
-          }
-        ]
-      }
+      topics
     ],
     topics: [
       {

@@ -20,10 +20,8 @@ body {
     color: #444;
   }
   nav#menu-id-0 > ul > li{
-    background-color: #444;
     color: #fff;
     border-radius: 5px;
-    padding: 15px;
   }
   a,
   a:hover {
@@ -50,7 +48,6 @@ body {
   }
   
   .menu-level-0 a {
-    padding: 12px;
     background-color: #eaeaea;
     border: 1px solid #eaeaea;
     font-size: 1.5rem;

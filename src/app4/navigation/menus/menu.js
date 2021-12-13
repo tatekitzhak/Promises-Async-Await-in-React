@@ -11,13 +11,12 @@ function Menu(props) {
     const footer = props.footer;
     
 
-    console.log('Menu:', topics)
     const [classNameAtt, setClassNameAtt] = useState("");
     const [roleAtt, setRoleAtt] = useState("");
 
     useEffect(() => {
         if(props.level== 1 && props.route.id == 'topics'){
-            console.log('Menu 1:', props.route.id, props.level )
+            // console.log('Menu 1:', props.route.id, props.level )
             setClassNameAtt('drawer-nav topics_menu');
             setRoleAtt('navigation');
           }

@@ -17,16 +17,16 @@ function Home(props) {
     <div>
       <h1>Home</h1>
       <div>{props.route && (<Breadcrumbs route={props.route}> </Breadcrumbs>)} {`${useLocatio.pathname}`}</div>
-      
-      <NestedMenu route={props.route} pid={'homeId'}>
 
+      <NestedMenu route={props.route} pid={'homeId'}>
+        
       </NestedMenu>
 
       <NestedMenu route={props.route} pid={'topicsId'}>
 
       </NestedMenu>
       
-      <img src="https://via.placeholder.com/640x480?text=Home" alt="Home" />
+      <img src={`https://via.placeholder.com/640x480?text=Home-${useLocatio.pathname}`} alt="Home" />
     </div>
   );
 }

@@ -12,7 +12,7 @@ function App4(props) {
       <Switch>
         {
           routes.map(function (route, index) {
-            console.log('App4:', route)
+            // console.log('App4:', route)
             return (
               <Route key={route.path} path={route.path}>
                 
