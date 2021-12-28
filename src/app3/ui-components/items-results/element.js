@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Element(props) {
-    const {isHidden, setIsHidden} = useState(0);
+    const [isHidden, setIsHidden] = useState(0);
 
     // function handleSubmit(v) {
     //     e.preventDefault();
@@ -44,12 +44,12 @@ function Element(props) {
                             <div>
                                 
                                 <form >
-                                    <button onClick={() => setIsHidden(isHidden + 1)} className="btn btn-primary text-white" type="button" >Yes</button>
+                                    <button  onClick={() => setIsHidden(isHidden + 1)} className="btn btn-primary text-white" type="button" >Yes</button>
                                     <button className="btn border-dark text-black" type="button" >Not really</button>
                                 </form>
                             </div>
                         </div>
-                        <div style={{ display: isHidden ? 'none' : null }} >
+                        <div style={{ display: isHidden ? 'block' : 'none' }} >
                             <span >Glad we could help!</span>
                             <div className="row">
                                 <div className="col-lg-12 col-md-12 col-sm-12">
