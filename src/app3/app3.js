@@ -35,7 +35,7 @@ function App() {
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" className="navbar-toggler navbar-toggler-right">
               <i className="fa fa-bars" aria-hidden="true"></i>
             </button>
-            <div><h1>Header NavBar</h1></div>
+            <div><h1 className="text-white">CTXT</h1></div>
             <div id="navbarSupportedContent" className="collapse navbar-collapse">
               <Link to="/" className="nav-link text-uppercase"> Home</Link>
               <Link to="/task-1" className="nav-link text-uppercase"> Task 1</Link>
