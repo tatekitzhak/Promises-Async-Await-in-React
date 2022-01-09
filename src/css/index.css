@@ -30,7 +30,8 @@ header{
 
 .navbar {
     padding: 15px 10px;
-    background: #ED5A27;
+    background-color: #3f6a7f;
+    border-bottom: 2px solid #ED5A27;
     margin-bottom: 40px;
     transition: all 0.4s;
 }
