@@ -22,6 +22,17 @@ body {
  /* ---------------------------------------------------
     Header
 ----------------------------------------------------- */
+.github-corner{
+    position: static;
+}
+.svg{
+    fill: #70B7FD;
+    color: #fff;
+    position: absolute;
+    bottom: 1px;
+    border: 0;
+    right: 0;
+}
 
 header{
     text-align: center;
