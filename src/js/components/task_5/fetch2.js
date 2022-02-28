@@ -1,4 +1,6 @@
 import React, {useState, useReducer, useEffect} from 'react';
+import ReactDOM from 'react-dom';
+
 
 const initialState = {
   counter: 0
@@ -29,7 +31,7 @@ function Fetch2() {
 
         const data = await dataResponse.text();
         const categories = await categoriesResponse.json();
-
+        console.log('data: ', data)
         return [data, categories];
 
       }catch(error) {
@@ -40,7 +42,7 @@ function Fetch2() {
     }
 
     fetchDataAndCategories('https://jsonplaceholder.typicode.com/posts/1','https://jsonplaceholder.typicode.com/posts/2').then(function ([data, categories]) {
-      
+      console.log('data: ', data)
     }).catch(error=>{
       console.log("error fetchDataAndCategories:", error)
     })
@@ -57,5 +59,6 @@ function Fetch2() {
   )
 
 }
-
+const wrapper = document.getElementById("app");
+wrapper ? ReactDOM.render(<Fetch2 />, wrapper) : false;
 export default Fetch2;

@@ -18,10 +18,17 @@ import "./css/app4.css"
 //import "./app2/app2.js";
 
 /* App3 */
-import './app3/app3.js';
+//import './app3/app3.js';
 
 /* App4 */
 // import "./app4/index.js";
+
+/* ./js/components/task_5/fetch2 */
+
+//  import "./js/components/task_5/fetch2";
+
+ import './redux_app/app'
+
 
 /************************************ react js user interface folder structure
  * 
