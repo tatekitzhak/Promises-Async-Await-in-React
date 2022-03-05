@@ -1,37 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import { createStore, combineReducers } from 'redux';
 import App from './component/app';
+import { reducer1, reducer2 } from './reducer';
+import UserContainer from './component/userContainer';
+import { Provider } from 'react-redux';
 
 const initState = {
-    playerName: '',
-    Scores: 0
+  playerName: '',
+  Scores: 0
 }
 
-function reducer(state = initState, action) {
-    switch (action.type) {
-        case 'INC':
-            return state.playerName = action.payload;        
-    }
-    return state;
-}
-
-const store =  createStore(reducer)
-
-store.subscribe(()=>{
-    console.log('subscribe:',store.getState())
+const allReducers = combineReducers({
+  user1: reducer1,
+  user2: reducer2
 });
 
-const todoAction = {type: 'INC', payload: 'Ran'};
 
-const result = store.dispatch(todoAction);
+const store = createStore(allReducers)
 
-console.log('store:', result);
+store.subscribe(() => {
+  console.log('subscribe:', store.getState())
+});
+
+const result = store.dispatch({
+  type: 'INCREMENT',
+  payload: 1
+});
+
+console.log('store:', store.getState());
 
 
 const rootDOM = document.getElementById("app");
 
 rootDOM ? ReactDOM.render(
-        <App />
-    , rootDOM) : <div>{false}</div>;
+  <Provider store={store}>
+    <App>
+      <UserContainer user />
+      <UserContainer user />
+    </App>
+  </Provider>
+  , rootDOM) : <div>{false}</div>;
 

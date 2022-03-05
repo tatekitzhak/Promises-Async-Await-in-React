@@ -1,15 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-function App() {
+
+function App(props) {
 
   return(
     <>
       <div>  
-          <h2>Hello redux</h2>
+          <h2>Hello redux {console.log('App:', props)}</h2>
       </div>
     </>
   )
 }
 
-export default App;
+function mapStateToProps(state, ownProps) {
+  const userState = ownProps.user
+      ? state
+      : state
+
+      return {
+          user: userState
+      }
+}
+export default connect(mapStateToProps)(App); 
+
 
