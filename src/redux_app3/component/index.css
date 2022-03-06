@@ -1,0 +1,423 @@
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media all and (max-width:900px) {
+    .services-grid {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+  }
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+    .topics_content { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .topics_content { grid-template-columns: repeat(3, 1fr); }
+  }
+/****
+Footer
+*/
+  @media only screen and (max-width: 768px) {
+    .footer-list-header {
+      font-size: 2em
+    }
+    .footer-list-anchor {
+      font-size: 1.1em
+    }
+  
+    .footer-social-overlap > a {
+      font-size: 2.24em
+    }
+    .footer-bottom-wrapper {
+      font-size: 1.3em
+    }
+  }
+  @media only screen and (max-width: 568px) {
+    h1{ font-size: 1rem; }
+   
+    .footer-list-top {
+      width: 100%
+    }
+    .footer-list-header {
+      font-size: 3em;
+    }
+    .footer-list-anchor {
+      font-size: 1.5em
+    }
+    .footer-social-section {
+      justify-content: center
+    }
+    .footer-social-section::after {
+      top: 25%
+    }
+    
+    .footer-social-overlap {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-social-icons-wrapper {
+      width: 100%;
+      padding: 0
+    }
+    .footer-social-overlap > a:not(:first-child) {
+      margin-left: 20px;
+    }
+    .footer-bottom-section {
+      padding: 0 5px 10px 5px
+    }
+    .footer-bottom-wrapper {
+      text-align: center;
+      width: 100%;
+      margin-top: 10px
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .footer-social-overlap > a {
+      margin: auto
+    }
+    .footer-social-overlap > a:not(:first-child) {
+      margin-left: 0;
+    }
+    .footer-bottom-rights {
+      display: block
+    }
+    .drawer-navbar {
+      position: fixed;
+      top: 54px;
+    }
+  }
+
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (min-width: 64em){
+    .drawer-navbar .drawer-navbar-header {
+        position: relative;
+        display: block;
+        float: none; 
+        width: auto;
+        padding: 0;
+        border: 0;
+    }
+    .drawer-navbar .drawer-nav {
+        position: relative;
+        left: 0;
+        overflow: visible;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+        transform: translate3d(0, 0, 0);
+    } 
+}
+@media only screen and (max-width: 1250px) and (min-width: 300px)  {
+   
+    .topics_menu{
+        top: 99px;
+        
+    }
+    .drawer-navbar {
+        background-color: #349d1287;
+        height: 21%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 325px){
+    .btn-close {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .btn-results {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .btn-vote{
+        margin-top: 5px;
+        width: 100%;
+    }
+    
+}
+@media (max-width:991px) {
+    .footer-menu {
+        padding-left: 70px;
+        padding-right: 50px;
+    }
+    .ml-1 {
+        margin-left: 3.25rem !important;
+    }
+}
+
+@media (min-width: 576px) { 
+    .active {
+        color: #111 !important;
+    }
+    ul.navbar-nav{
+        text-align: left;
+
+    }
+    h2{
+        padding-top: 1rem;
+    }
+/*
+ SIDE BAR : drawer-nav
+*/
+    .drawer-navbar .drawer-navbar-header {
+        position: relative;
+        display: block;
+        float: none;
+        width: inherit;
+        padding: 0;
+        border: 0;
+    }  
+}
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .ml-1 {
+        margin-left: 5.25rem !important;
+    }
+    .navbar {
+        background: #05A2EA;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #fff;
+    }
+    .footer-menu {
+        padding-left: 70px;
+        padding-right: 50px;
+    }
+    
+}
+
+@media only screen and (max-width: 1500px)  {
+    #siteMapContent {
+        margin-left: 0.25rem !important;
+        max-width: 100%;
+    }
+    .topics_content {
+        display: grid;
+        grid-template-columns: 100%;  
+    }
+
+}
+ 
+@media only screen and (max-width: 500px) and (min-width: 300px)  {
+    .top_padding {
+        height: 100px !important;
+    }
+    .container-fluid {
+        padding-right: 3px;
+        padding-left: 3px;
+        display: flex;
+        align-items: stretch;
+    }
+    .convert_service_plan {
+        max-width: 100% !important;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px !important;
+    }
+    .convert_service_plan > p{
+        background-color: #0E77AC;
+        font-size: 14px;
+    }
+    #sidebar{
+        width: 70%;
+    }
+    .bar{
+        background-color: #111;
+
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+   
+    #siteMapContent {
+        margin-left: 0.1rem !important;
+        max-width: 100%;
+    }
+
+    ul.navbar-nav{
+        text-align: left;
+    }
+    .headline-introduce{
+        font-size: 0.9rem;
+    }
+    .container .logo-icon{
+        width: 74px !important;
+        height: 45px !important;
+    }
+    .container a.navbar-brand{
+        margin-right: 0rem;
+    }
+    .contentWrapper{
+       /* display: table-cell; */
+        padding-right: 1px !important; 
+        padding-left: 1px !important;
+    }
+    h2, h3{
+        padding-top: 0.9rem;
+        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+    }
+    .fileTable>h4{
+        font-size: 1.1rem;
+        
+    }
+    .how-converter-work >h3{
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .py-5 {
+        padding-top: 0.1rem !important;
+    }
+    div.subtitle >p{
+        
+        font-size: 0.9rem;
+    }
+    .displayWorkflow>h4{
+        font-size: 1.2rem;
+    }
+    .displayWorkflow p{
+        font-size: 1.1em;
+    }
+    .featureWorkinner {
+        margin-top: -45px !important;
+        padding: 2rem !important;
+    }
+    .footer-menu{
+        padding-left: 70px;
+        padding-right: 50px;
+    }
+/*
+ SIDE BAR : drawer-nav
+*/
+    .drawer-navbar .drawer-navbar-header {
+        width: 100%;
+        background-color: darkorange
+    }
+    .breadcrumb {
+        padding: 0;
+    }
+
+    .drawer-navbar .drawer-menu-item {
+        line-height: 0.2rem;
+    }
+ 
+}
+
+@media only screen and (max-width: 900px) and (min-width: 500px)  {
+   
+    #siteMapContent {
+        background-color: #05a2ea1a;
+        margin-left: 0.25rem !important;
+        max-width: 100%;
+    }
+    #sidebar {
+        width: 55%;
+        
+    }
+    .categories {
+        background-color: #05A2EA;
+    }
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #fff;
+        width: inherit;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: block;
+    }
+    .ml-1 {
+        margin-left: 1.25rem !important;
+    }
+/*
+ SIDE BAR : drawer-nav
+*/
+    .drawer-navbar .drawer-navbar-header {
+        position: relative;
+        display: block;
+        float: none;
+        width: auto;
+        padding: 0;
+        border: 0;
+    }
+    .drawer-nav{
+        top: inherit;
+    }
+    .drawer-navbar {
+        top: 66px;
+        background-color: #349d1287;
+        height: 21%;
+        width: 38%;
+    }
+    .container-fluid {
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+/*
+ SIDE BAR : drawer-nav
+*/
+    .drawer-navbar .drawer-navbar-header {
+        position: relative;
+        display: block;
+        float: none;
+        width: inherit;
+        padding: 0;
+        border: 0;
+    }
+    .drawer-nav{
+        top: 0px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* 
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ 
+https://gist.github.com/marcobarbosa/798569
+*/
